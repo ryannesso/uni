@@ -1,0 +1,2 @@
+source;share/rrm_simple_robot_model/environment/ament_prefix_path.sh
+source;share/rrm_simple_robot_model/environment/path.sh

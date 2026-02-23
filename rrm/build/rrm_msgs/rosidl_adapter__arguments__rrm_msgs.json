@@ -1,0 +1,7 @@
+{
+  "package_name": "rrm_msgs",
+  "non_idl_tuples": [
+    "/home/rrm/src/rrm_msgs:msg/Command.msg",
+    "/home/rrm/src/rrm_msgs:srv/Command.srv"
+  ]
+}

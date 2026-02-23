@@ -1,0 +1,30 @@
+[0.010s] Invoking command in '/home/rrm/build/cv2': AMENT_PREFIX_PATH=/home/rrm/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/build/cv2 -- -j8 -l8
+[0.044s] [35m[1mConsolidate compiler generated dependencies of target cv2_node[0m
+[0.044s] [35m[1mConsolidate compiler generated dependencies of target logger_node[0m
+[0.059s] [ 50%] Built target logger_node
+[0.061s] [ 75%] [32mBuilding CXX object CMakeFiles/cv2_node.dir/src/teleop.cpp.o[0m
+[3.662s] [100%] [32m[1mLinking CXX executable cv2_node[0m
+[3.828s] [100%] Built target cv2_node
+[3.838s] Invoked command in '/home/rrm/build/cv2' returned '0': AMENT_PREFIX_PATH=/home/rrm/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/build/cv2 -- -j8 -l8
+[3.839s] Invoking command in '/home/rrm/build/cv2': AMENT_PREFIX_PATH=/home/rrm/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rrm/build/cv2
+[3.847s] -- Install configuration: ""
+[3.847s] -- Installing: /home/rrm/install/cv2/lib/cv2/cv2_node
+[3.848s] -- Set runtime path of "/home/rrm/install/cv2/lib/cv2/cv2_node" to ""
+[3.848s] -- Installing: /home/rrm/install/cv2/lib/cv2/logger_node
+[3.851s] -- Set runtime path of "/home/rrm/install/cv2/lib/cv2/logger_node" to ""
+[3.851s] -- Installing: /home/rrm/install/cv2/share/ament_index/resource_index/package_run_dependencies/cv2
+[3.851s] -- Installing: /home/rrm/install/cv2/share/ament_index/resource_index/parent_prefix_path/cv2
+[3.851s] -- Installing: /home/rrm/install/cv2/share/cv2/environment/ament_prefix_path.sh
+[3.852s] -- Installing: /home/rrm/install/cv2/share/cv2/environment/ament_prefix_path.dsv
+[3.852s] -- Installing: /home/rrm/install/cv2/share/cv2/environment/path.sh
+[3.852s] -- Installing: /home/rrm/install/cv2/share/cv2/environment/path.dsv
+[3.852s] -- Installing: /home/rrm/install/cv2/share/cv2/local_setup.bash
+[3.852s] -- Installing: /home/rrm/install/cv2/share/cv2/local_setup.sh
+[3.852s] -- Installing: /home/rrm/install/cv2/share/cv2/local_setup.zsh
+[3.852s] -- Installing: /home/rrm/install/cv2/share/cv2/local_setup.dsv
+[3.852s] -- Installing: /home/rrm/install/cv2/share/cv2/package.dsv
+[3.852s] -- Installing: /home/rrm/install/cv2/share/ament_index/resource_index/packages/cv2
+[3.853s] -- Installing: /home/rrm/install/cv2/share/cv2/cmake/cv2Config.cmake
+[3.853s] -- Installing: /home/rrm/install/cv2/share/cv2/cmake/cv2Config-version.cmake
+[3.853s] -- Installing: /home/rrm/install/cv2/share/cv2/package.xml
+[3.855s] Invoked command in '/home/rrm/build/cv2' returned '0': AMENT_PREFIX_PATH=/home/rrm/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rrm/build/cv2

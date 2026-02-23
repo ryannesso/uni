@@ -1,0 +1,13 @@
+[01m[K/home/rrm/src/cv2/src/joint_logger.cpp:[m[K In member function ‘[01m[Kvoid JointLogger::joint_states_callback(sensor_msgs::msg::JointState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/rrm/src/cv2/src/joint_logger.cpp:22:33:[m[K [01;31m[Kerror: [m[Ka function-definition is not allowed here before ‘[01m[K{[m[K’ token
+   22 | int main(int argc, char **argv) [01;31m[K{[m[K
+      |                                 [01;31m[K^[m[K
+[01m[K/home/rrm/src/cv2/src/joint_logger.cpp:28:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+   28 | }
+      |  [01;31m[K^[m[K
+[01m[K/home/rrm/src/cv2/src/joint_logger.cpp:9:92:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+    9 | void JointLogger::joint_states_callback(const sensor_msgs::msg::JointState::SharedPtr msg) [01;36m[K{[m[K
+      |                                                                                            [01;36m[K^[m[K
+gmake[2]: *** [CMakeFiles/logger_node.dir/build.make:76: CMakeFiles/logger_node.dir/src/joint_logger.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/logger_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

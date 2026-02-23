@@ -1,0 +1,596 @@
+[0.000000] (-) TimerEvent: {}
+[0.000093] (cv1) JobQueued: {'identifier': 'cv1', 'dependencies': OrderedDict()}
+[0.000136] (rrm_msgs) JobQueued: {'identifier': 'rrm_msgs', 'dependencies': OrderedDict()}
+[0.000166] (rrm_simple_robot_model) JobQueued: {'identifier': 'rrm_simple_robot_model', 'dependencies': OrderedDict()}
+[0.000194] (cv2) JobQueued: {'identifier': 'cv2', 'dependencies': OrderedDict([('rrm_msgs', '/home/rrm/install/rrm_msgs')])}
+[0.000223] (rrm_sim) JobQueued: {'identifier': 'rrm_sim', 'dependencies': OrderedDict([('rrm_msgs', '/home/rrm/install/rrm_msgs')])}
+[0.000262] (rrm_msgs) JobStarted: {'identifier': 'rrm_msgs'}
+[0.005328] (cv1) JobStarted: {'identifier': 'cv1'}
+[0.009606] (rrm_simple_robot_model) JobStarted: {'identifier': 'rrm_simple_robot_model'}
+[0.019474] (rrm_msgs) JobProgress: {'identifier': 'rrm_msgs', 'progress': 'cmake'}
+[0.020134] (rrm_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/rrm/src/rrm_msgs', '-DCMAKE_INSTALL_PREFIX=/home/rrm/install/rrm_msgs'], 'cwd': '/home/rrm/build/rrm_msgs', 'env': OrderedDict([('HOSTNAME', 'yehor-desktop'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/rrm/src'), ('TERM_PROGRAM_VERSION', '1.106.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-ced0e13c-6bb2-4994-917a-0ba4e852400f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/rrm/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-471fc31f3a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('AMENT_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/rrm/build/rrm_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble')]), 'shell': False}
+[0.022700] (cv1) JobProgress: {'identifier': 'cv1', 'progress': 'cmake'}
+[0.023204] (cv1) Command: {'cmd': ['/usr/bin/cmake', '/home/rrm/src/cv1', '-DCMAKE_INSTALL_PREFIX=/home/rrm/install/cv1'], 'cwd': '/home/rrm/build/cv1', 'env': OrderedDict([('HOSTNAME', 'yehor-desktop'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/rrm/src'), ('TERM_PROGRAM_VERSION', '1.106.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-ced0e13c-6bb2-4994-917a-0ba4e852400f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/rrm/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-471fc31f3a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('AMENT_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/rrm/build/cv1'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble')]), 'shell': False}
+[0.026706] (rrm_simple_robot_model) JobProgress: {'identifier': 'rrm_simple_robot_model', 'progress': 'cmake'}
+[0.027177] (rrm_simple_robot_model) Command: {'cmd': ['/usr/bin/cmake', '/home/rrm/src/rrm_simple_robot_model', '-DCMAKE_INSTALL_PREFIX=/home/rrm/install/rrm_simple_robot_model'], 'cwd': '/home/rrm/build/rrm_simple_robot_model', 'env': OrderedDict([('HOSTNAME', 'yehor-desktop'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/rrm/src'), ('TERM_PROGRAM_VERSION', '1.106.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-ced0e13c-6bb2-4994-917a-0ba4e852400f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/rrm/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-471fc31f3a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('AMENT_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/rrm/build/rrm_simple_robot_model'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble')]), 'shell': False}
+[0.075449] (cv1) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.081803] (rrm_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.084162] (rrm_simple_robot_model) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099392] (-) TimerEvent: {}
+[0.128795] (cv1) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.133328] (rrm_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.136261] (cv1) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.141051] (rrm_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.143223] (rrm_simple_robot_model) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.149401] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.190207] (cv1) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.192927] (rrm_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.198691] (cv1) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.198858] (cv1) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.199239] (cv1) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.199442] (-) TimerEvent: {}
+[0.199858] (rrm_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.200092] (rrm_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.200439] (rrm_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.202258] (cv1) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.203129] (rrm_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.203832] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.217648] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.217828] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.217921] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.221363] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.273238] (cv1) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.273368] (rrm_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.285291] (rrm_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.285415] (cv1) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.285604] (rrm_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.285720] (cv1) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.286214] (rrm_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.286311] (cv1) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.286909] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.289167] (rrm_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.289248] (cv1) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.293362] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.293711] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.294116] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.296348] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299537] (-) TimerEvent: {}
+[0.399785] (-) TimerEvent: {}
+[0.433154] (rrm_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.435461] (cv1) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.437435] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.499874] (-) TimerEvent: {}
+[0.518255] (rrm_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.521185] (cv1) StdoutLine: {'line': b'-- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.522128] (rrm_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.530209] (rrm_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.533961] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Found rviz2: 11.2.25 (/opt/ros/humble/share/rviz2/cmake)\n'}
+[0.558395] (cv1) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.563010] (cv1) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.564258] (rrm_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.570214] (cv1) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.580667] (cv1) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.593148] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.596715] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Generating done\n'}
+[0.598666] (cv1) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.599368] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Build files have been written to: /home/rrm/build/rrm_simple_robot_model\n'}
+[0.599940] (-) TimerEvent: {}
+[0.603503] (rrm_simple_robot_model) CommandEnded: {'returncode': 0}
+[0.604019] (rrm_simple_robot_model) JobProgress: {'identifier': 'rrm_simple_robot_model', 'progress': 'build'}
+[0.604768] (rrm_simple_robot_model) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rrm/build/rrm_simple_robot_model', '--', '-j8', '-l8'], 'cwd': '/home/rrm/build/rrm_simple_robot_model', 'env': OrderedDict([('HOSTNAME', 'yehor-desktop'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/rrm/src'), ('TERM_PROGRAM_VERSION', '1.106.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-ced0e13c-6bb2-4994-917a-0ba4e852400f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/rrm/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-471fc31f3a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('AMENT_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/rrm/build/rrm_simple_robot_model'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble')]), 'shell': False}
+[0.637051] (rrm_simple_robot_model) CommandEnded: {'returncode': 0}
+[0.637708] (rrm_simple_robot_model) JobProgress: {'identifier': 'rrm_simple_robot_model', 'progress': 'install'}
+[0.643835] (rrm_simple_robot_model) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rrm/build/rrm_simple_robot_model'], 'cwd': '/home/rrm/build/rrm_simple_robot_model', 'env': OrderedDict([('HOSTNAME', 'yehor-desktop'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/rrm/src'), ('TERM_PROGRAM_VERSION', '1.106.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-ced0e13c-6bb2-4994-917a-0ba4e852400f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/rrm/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-471fc31f3a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('AMENT_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/rrm/build/rrm_simple_robot_model'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble')]), 'shell': False}
+[0.646260] (cv1) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.648568] (cv1) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.649679] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.649849] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/urdf\n'}
+[0.649978] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/urdf/arm.urdf\n'}
+[0.650132] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/config\n'}
+[0.650278] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/config/rrm_cv3.rviz\n'}
+[0.650385] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/launch\n'}
+[0.650478] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/launch/robot_state_publisher.launch.xml\n'}
+[0.650590] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/launch/robot_state_publisher.launch.py\n'}
+[0.650680] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/ament_index/resource_index/package_run_dependencies/rrm_simple_robot_model\n'}
+[0.650785] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/ament_index/resource_index/parent_prefix_path/rrm_simple_robot_model\n'}
+[0.650895] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/environment/ament_prefix_path.sh\n'}
+[0.651006] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/environment/ament_prefix_path.dsv\n'}
+[0.651114] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/environment/path.sh\n'}
+[0.651219] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/environment/path.dsv\n'}
+[0.651322] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/local_setup.bash\n'}
+[0.651428] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/local_setup.sh\n'}
+[0.651533] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/local_setup.zsh\n'}
+[0.651636] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/local_setup.dsv\n'}
+[0.651738] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.dsv\n'}
+[0.651869] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/ament_index/resource_index/packages/rrm_simple_robot_model\n'}
+[0.652012] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/cmake/rrm_simple_robot_modelConfig.cmake\n'}
+[0.652126] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/cmake/rrm_simple_robot_modelConfig-version.cmake\n'}
+[0.652239] (rrm_simple_robot_model) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.xml\n'}
+[0.653735] (rrm_simple_robot_model) CommandEnded: {'returncode': 0}
+[0.673767] (rrm_simple_robot_model) JobEnded: {'identifier': 'rrm_simple_robot_model', 'rc': 0}
+[0.700033] (-) TimerEvent: {}
+[0.744460] (cv1) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.767227] (cv1) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.800139] (-) TimerEvent: {}
+[0.807604] (cv1) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.815498] (cv1) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.862993] (rrm_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.872922] (cv1) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.873397] (cv1) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.900224] (-) TimerEvent: {}
+[0.935144] (cv1) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.936284] (cv1) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.990317] (cv1) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.000312] (-) TimerEvent: {}
+[1.033215] (rrm_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.068626] (cv1) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.068818] (cv1) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/rrm/src/cv1/include>\n'}
+[1.068894] (cv1) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.069653] (cv1) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.070838] (cv1) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.070904] (cv1) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.071426] (cv1) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.072723] (cv1) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.081213] (cv1) StdoutLine: {'line': b'-- Generating done\n'}
+[1.084757] (cv1) StdoutLine: {'line': b'-- Build files have been written to: /home/rrm/build/cv1\n'}
+[1.090857] (cv1) CommandEnded: {'returncode': 0}
+[1.091243] (cv1) JobProgress: {'identifier': 'cv1', 'progress': 'build'}
+[1.091424] (cv1) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rrm/build/cv1', '--', '-j8', '-l8'], 'cwd': '/home/rrm/build/cv1', 'env': OrderedDict([('HOSTNAME', 'yehor-desktop'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/rrm/src'), ('TERM_PROGRAM_VERSION', '1.106.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-ced0e13c-6bb2-4994-917a-0ba4e852400f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/rrm/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-471fc31f3a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('AMENT_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/rrm/build/cv1'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble')]), 'shell': False}
+[1.100406] (-) TimerEvent: {}
+[1.133007] (cv1) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/cv1_node.dir/src/robot.cpp.o\x1b[0m\n'}
+[1.133197] (cv1) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/cv1_node.dir/src/cv1_node.cpp.o\x1b[0m\n'}
+[1.201865] (-) TimerEvent: {}
+[1.268819] (rrm_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.301595] (rrm_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.301921] (-) TimerEvent: {}
+[1.303794] (rrm_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.333382] (rrm_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.333582] (rrm_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.333648] (rrm_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.333703] (rrm_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.354348] (rrm_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.389886] (rrm_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.402026] (-) TimerEvent: {}
+[1.428623] (rrm_msgs) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[1.430577] (rrm_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.431810] (rrm_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.434277] (rrm_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.467921] (rrm_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.479636] (rrm_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/rrm/build/rrm_msgs\n'}
+[1.484982] (rrm_msgs) CommandEnded: {'returncode': 0}
+[1.485479] (rrm_msgs) JobProgress: {'identifier': 'rrm_msgs', 'progress': 'build'}
+[1.485796] (rrm_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rrm/build/rrm_msgs', '--', '-j8', '-l8'], 'cwd': '/home/rrm/build/rrm_msgs', 'env': OrderedDict([('HOSTNAME', 'yehor-desktop'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/rrm/src'), ('TERM_PROGRAM_VERSION', '1.106.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-ced0e13c-6bb2-4994-917a-0ba4e852400f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/rrm/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-471fc31f3a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('AMENT_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/rrm/build/rrm_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble')]), 'shell': False}
+[1.502089] (-) TimerEvent: {}
+[1.520609] (rrm_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.528164] (rrm_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.547942] (rrm_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_rrm_msgs\n'}
+[1.602189] (-) TimerEvent: {}
+[1.703028] (-) TimerEvent: {}
+[1.795607] (rrm_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[1.796488] (rrm_msgs) StdoutLine: {'line': b'creating rrm_msgs.egg-info\n'}
+[1.797412] (rrm_msgs) StdoutLine: {'line': b'writing rrm_msgs.egg-info/PKG-INFO\n'}
+[1.797647] (rrm_msgs) StdoutLine: {'line': b'writing dependency_links to rrm_msgs.egg-info/dependency_links.txt\n'}
+[1.797855] (rrm_msgs) StdoutLine: {'line': b'writing top-level names to rrm_msgs.egg-info/top_level.txt\n'}
+[1.798089] (rrm_msgs) StdoutLine: {'line': b"writing manifest file 'rrm_msgs.egg-info/SOURCES.txt'\n"}
+[1.801082] (rrm_msgs) StdoutLine: {'line': b"reading manifest file 'rrm_msgs.egg-info/SOURCES.txt'\n"}
+[1.801775] (rrm_msgs) StdoutLine: {'line': b"writing manifest file 'rrm_msgs.egg-info/SOURCES.txt'\n"}
+[1.802952] (-) TimerEvent: {}
+[1.834631] (rrm_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_rrm_msgs_egg\n'}
+[1.903018] (-) TimerEvent: {}
+[1.954232] (rrm_msgs) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/rrm_msgs__rosidl_generator_c.dir/rosidl_generator_c/rrm_msgs/msg/detail/command__functions.c.o\x1b[0m\n'}
+[1.955234] (rrm_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/rrm_msgs__rosidl_generator_c.dir/rosidl_generator_c/rrm_msgs/srv/detail/command__functions.c.o\x1b[0m\n'}
+[2.003137] (-) TimerEvent: {}
+[2.006665] (rrm_msgs) StdoutLine: {'line': b'[ 10%] Built target rrm_msgs__cpp\n'}
+[2.018707] (rrm_msgs) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.018902] (rrm_msgs) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.025340] (rrm_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32m\x1b[1mLinking C shared library librrm_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[2.037892] (rrm_msgs) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.103245] (-) TimerEvent: {}
+[2.108092] (rrm_msgs) StdoutLine: {'line': b'[ 20%] Built target rrm_msgs__rosidl_generator_c\n'}
+[2.143049] (rrm_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.144624] (rrm_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.152458] (rrm_msgs) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.203335] (-) TimerEvent: {}
+[2.303616] (-) TimerEvent: {}
+[2.403911] (-) TimerEvent: {}
+[2.504196] (-) TimerEvent: {}
+[2.514698] (rrm_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/rrm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrm_msgs/msg/command__type_support.cpp.o\x1b[0m\n'}
+[2.534271] (rrm_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/rrm_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/rrm_msgs/srv/command__type_support.cpp.o\x1b[0m\n'}
+[2.534474] (rrm_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/rrm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rrm_msgs/msg/detail/command__type_support.cpp.o\x1b[0m\n'}
+[2.542613] (rrm_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/rrm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rrm_msgs/msg/detail/dds_fastrtps/command__type_support.cpp.o\x1b[0m\n'}
+[2.557842] (rrm_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/rrm_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/rrm_msgs/srv/detail/command__type_support.cpp.o\x1b[0m\n'}
+[2.604299] (-) TimerEvent: {}
+[2.661449] (rrm_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/rrm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rrm_msgs/msg/command__type_support.cpp.o\x1b[0m\n'}
+[2.704399] (-) TimerEvent: {}
+[2.761289] (rrm_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/rrm_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/rrm_msgs/srv/command__type_support.cpp.o\x1b[0m\n'}
+[2.804505] (-) TimerEvent: {}
+[2.873607] (rrm_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library librrm_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.895648] (rrm_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/rrm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rrm_msgs/msg/detail/command__type_support_c.cpp.o\x1b[0m\n'}
+[2.904812] (-) TimerEvent: {}
+[2.953017] (rrm_msgs) StdoutLine: {'line': b'[ 51%] Built target rrm_msgs__rosidl_typesupport_c\n'}
+[2.962735] (rrm_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/rrm_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/rrm_msgs/srv/detail/command__type_support_c.cpp.o\x1b[0m\n'}
+[3.004924] (-) TimerEvent: {}
+[3.026069] (rrm_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/rrm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rrm_msgs/msg/detail/command__type_support.c.o\x1b[0m\n'}
+[3.054253] (rrm_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/rrm_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/rrm_msgs/srv/detail/dds_fastrtps/command__type_support.cpp.o\x1b[0m\n'}
+[3.063509] (rrm_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library librrm_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[3.085490] (rrm_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding C object CMakeFiles/rrm_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/rrm_msgs/srv/detail/command__type_support.c.o\x1b[0m\n'}
+[3.105025] (-) TimerEvent: {}
+[3.203889] (rrm_msgs) StdoutLine: {'line': b'[ 66%] Built target rrm_msgs__rosidl_typesupport_cpp\n'}
+[3.205124] (-) TimerEvent: {}
+[3.207326] (rrm_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking C shared library librrm_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[3.258459] (rrm_msgs) StdoutLine: {'line': b'[ 66%] Built target rrm_msgs__rosidl_typesupport_introspection_c\n'}
+[3.305179] (-) TimerEvent: {}
+[3.397014] (rrm_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library librrm_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[3.405291] (-) TimerEvent: {}
+[3.486497] (rrm_msgs) StdoutLine: {'line': b'[ 69%] Built target rrm_msgs__rosidl_typesupport_introspection_cpp\n'}
+[3.505381] (-) TimerEvent: {}
+[3.519588] (rrm_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library librrm_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[3.601427] (rrm_msgs) StdoutLine: {'line': b'[ 71%] Built target rrm_msgs__rosidl_typesupport_fastrtps_c\n'}
+[3.605485] (-) TimerEvent: {}
+[3.697892] (rrm_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library librrm_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[3.705599] (-) TimerEvent: {}
+[3.771794] (rrm_msgs) StdoutLine: {'line': b'[ 74%] Built target rrm_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[3.785503] (rrm_msgs) StdoutLine: {'line': b'[ 74%] Built target rrm_msgs\n'}
+[3.800290] (rrm_msgs) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[3.805683] (-) TimerEvent: {}
+[3.905925] (-) TimerEvent: {}
+[4.006181] (-) TimerEvent: {}
+[4.106433] (-) TimerEvent: {}
+[4.206675] (-) TimerEvent: {}
+[4.249568] (rrm_msgs) StdoutLine: {'line': b'[ 76%] Built target rrm_msgs__py\n'}
+[4.263330] (rrm_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/rrm_msgs__rosidl_generator_py.dir/rosidl_generator_py/rrm_msgs/srv/_command_s.c.o\x1b[0m\n'}
+[4.263549] (rrm_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/rrm_msgs__rosidl_generator_py.dir/rosidl_generator_py/rrm_msgs/msg/_command_s.c.o\x1b[0m\n'}
+[4.306735] (-) TimerEvent: {}
+[4.391175] (rrm_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/rrm_msgs/librrm_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[4.406841] (-) TimerEvent: {}
+[4.430237] (rrm_msgs) StdoutLine: {'line': b'[ 84%] Built target rrm_msgs__rosidl_generator_py\n'}
+[4.449286] (rrm_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/rrm_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/rrm_msgs/_rrm_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[4.450943] (rrm_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/rrm_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/rrm_msgs/_rrm_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[4.452358] (rrm_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/rrm_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/rrm_msgs/_rrm_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[4.507422] (-) TimerEvent: {}
+[4.546049] (rrm_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/rrm_msgs/rrm_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.557506] (rrm_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/rrm_msgs/rrm_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.559518] (rrm_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/rrm_msgs/rrm_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[4.581732] (rrm_msgs) StdoutLine: {'line': b'[100%] Built target rrm_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[4.585956] (rrm_msgs) StdoutLine: {'line': b'[100%] Built target rrm_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.586152] (rrm_msgs) StdoutLine: {'line': b'[100%] Built target rrm_msgs__rosidl_typesupport_c__pyext\n'}
+[4.594133] (rrm_msgs) CommandEnded: {'returncode': 0}
+[4.594852] (rrm_msgs) JobProgress: {'identifier': 'rrm_msgs', 'progress': 'install'}
+[4.595311] (rrm_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rrm/build/rrm_msgs'], 'cwd': '/home/rrm/build/rrm_msgs', 'env': OrderedDict([('HOSTNAME', 'yehor-desktop'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/rrm/src'), ('TERM_PROGRAM_VERSION', '1.106.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-ced0e13c-6bb2-4994-917a-0ba4e852400f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/rrm/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-471fc31f3a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('AMENT_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/rrm/build/rrm_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble')]), 'shell': False}
+[4.600992] (rrm_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.601162] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/ament_index/resource_index/rosidl_interfaces/rrm_msgs\n'}
+[4.601296] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs\n'}
+[4.601401] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg\n'}
+[4.601478] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail\n'}
+[4.601561] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__functions.h\n'}
+[4.601638] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__type_support.h\n'}
+[4.601731] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__functions.c\n'}
+[4.601829] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__struct.h\n'}
+[4.601923] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/command.h\n'}
+[4.602013] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.602102] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv\n'}
+[4.602178] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail\n'}
+[4.602257] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__functions.h\n'}
+[4.602330] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__type_support.h\n'}
+[4.602404] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__functions.c\n'}
+[4.602504] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__struct.h\n'}
+[4.602595] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/command.h\n'}
+[4.602769] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/environment/library_path.sh\n'}
+[4.602890] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/environment/library_path.dsv\n'}
+[4.603052] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_generator_c.so\n'}
+[4.603467] (rrm_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_generator_c.so" to ""\n'}
+[4.603542] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs\n'}
+[4.603627] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg\n'}
+[4.603693] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.603788] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail\n'}
+[4.603860] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__rosidl_typesupport_fastrtps_c.h\n'}
+[4.603993] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv\n'}
+[4.604061] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail\n'}
+[4.604126] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__rosidl_typesupport_fastrtps_c.h\n'}
+[4.604297] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[4.604725] (rrm_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[4.604836] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs\n'}
+[4.604978] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg\n'}
+[4.605089] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail\n'}
+[4.605178] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__type_support.c\n'}
+[4.605304] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__rosidl_typesupport_introspection_c.h\n'}
+[4.605424] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.605539] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv\n'}
+[4.605615] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail\n'}
+[4.605714] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__type_support.c\n'}
+[4.605805] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__rosidl_typesupport_introspection_c.h\n'}
+[4.605890] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_typesupport_introspection_c.so\n'}
+[4.606003] (rrm_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[4.606094] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_typesupport_c.so\n'}
+[4.606402] (rrm_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_typesupport_c.so" to ""\n'}
+[4.606476] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs\n'}
+[4.606549] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg\n'}
+[4.606613] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/command.hpp\n'}
+[4.606701] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail\n'}
+[4.606770] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__traits.hpp\n'}
+[4.606909] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__builder.hpp\n'}
+[4.607052] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__type_support.hpp\n'}
+[4.607198] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__struct.hpp\n'}
+[4.607250] (-) TimerEvent: {}
+[4.607365] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[4.607499] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv\n'}
+[4.607568] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/command.hpp\n'}
+[4.607679] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail\n'}
+[4.607743] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__traits.hpp\n'}
+[4.607885] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__builder.hpp\n'}
+[4.608039] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__type_support.hpp\n'}
+[4.608185] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__struct.hpp\n'}
+[4.608393] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs\n'}
+[4.608467] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg\n'}
+[4.608544] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail\n'}
+[4.608595] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/dds_fastrtps\n'}
+[4.608664] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.608778] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.608915] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv\n'}
+[4.608980] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail\n'}
+[4.609046] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/dds_fastrtps\n'}
+[4.609112] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.609313] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.609833] (rrm_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[4.609920] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs\n'}
+[4.610003] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg\n'}
+[4.610068] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail\n'}
+[4.610118] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__type_support.cpp\n'}
+[4.610191] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/msg/detail/command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.610338] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv\n'}
+[4.610404] (rrm_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail\n'}
+[4.610472] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__type_support.cpp\n'}
+[4.610602] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/include/rrm_msgs/rrm_msgs/srv/detail/command__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.610815] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[4.611280] (rrm_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[4.611366] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_typesupport_cpp.so\n'}
+[4.611782] (rrm_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[4.611857] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/environment/pythonpath.sh\n'}
+[4.612025] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/environment/pythonpath.dsv\n'}
+[4.612216] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs-0.0.0-py3.10.egg-info\n'}
+[4.612416] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[4.612552] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[4.612665] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[4.612770] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[4.612923] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs\n'}
+[4.613009] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/__init__.py\n'}
+[4.613163] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/msg\n'}
+[4.613281] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/msg/_command_s.c\n'}
+[4.613391] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/msg/__init__.py\n'}
+[4.613498] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/msg/_command.py\n'}
+[4.613725] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/rrm_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.613862] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/_rrm_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[4.613942] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/_rrm_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[4.614046] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/_rrm_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.614152] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/librrm_msgs__rosidl_generator_py.so\n'}
+[4.614478] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/rrm_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.614635] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/rrm_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.614758] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/srv\n'}
+[4.614864] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/srv/_command_s.c\n'}
+[4.614963] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/srv/__init__.py\n'}
+[4.615045] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/srv/_command.py\n'}
+[4.661887] (rrm_msgs) StdoutLine: {'line': b"Listing '/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs'...\n"}
+[4.662023] (rrm_msgs) StdoutLine: {'line': b"Compiling '/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/__init__.py'...\n"}
+[4.662088] (rrm_msgs) StdoutLine: {'line': b"Listing '/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/msg'...\n"}
+[4.662143] (rrm_msgs) StdoutLine: {'line': b"Compiling '/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/msg/__init__.py'...\n"}
+[4.662198] (rrm_msgs) StdoutLine: {'line': b"Compiling '/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/msg/_command.py'...\n"}
+[4.662248] (rrm_msgs) StdoutLine: {'line': b"Listing '/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/srv'...\n"}
+[4.662299] (rrm_msgs) StdoutLine: {'line': b"Compiling '/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/srv/__init__.py'...\n"}
+[4.662349] (rrm_msgs) StdoutLine: {'line': b"Compiling '/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/srv/_command.py'...\n"}
+[4.667108] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/rrm_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.667421] (rrm_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/rrm_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.667667] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/rrm_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.668011] (rrm_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/rrm_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.668222] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/rrm_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[4.668526] (rrm_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages/rrm_msgs/rrm_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[4.668650] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_generator_py.so\n'}
+[4.668981] (rrm_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/rrm/install/rrm_msgs/lib/librrm_msgs__rosidl_generator_py.so" to ""\n'}
+[4.669114] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/msg/Command.idl\n'}
+[4.669296] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/srv/Command.idl\n'}
+[4.669459] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/msg/Command.msg\n'}
+[4.669635] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/srv/Command.srv\n'}
+[4.669796] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/srv/Command_Request.msg\n'}
+[4.669964] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/srv/Command_Response.msg\n'}
+[4.670159] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/ament_index/resource_index/package_run_dependencies/rrm_msgs\n'}
+[4.670362] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/ament_index/resource_index/parent_prefix_path/rrm_msgs\n'}
+[4.670540] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/environment/ament_prefix_path.sh\n'}
+[4.670704] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/environment/ament_prefix_path.dsv\n'}
+[4.670872] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/environment/path.sh\n'}
+[4.671038] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/environment/path.dsv\n'}
+[4.671201] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/local_setup.bash\n'}
+[4.671362] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/local_setup.sh\n'}
+[4.671531] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/local_setup.zsh\n'}
+[4.671684] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/local_setup.dsv\n'}
+[4.671847] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/package.dsv\n'}
+[4.672047] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/ament_index/resource_index/packages/rrm_msgs\n'}
+[4.672256] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/export_rrm_msgs__rosidl_generator_cExport.cmake\n'}
+[4.672428] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/export_rrm_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.672611] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/export_rrm_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.672788] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/export_rrm_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.672970] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rrm_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.673143] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rrm_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.673325] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rrm_msgs__rosidl_typesupport_cExport.cmake\n'}
+[4.673504] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rrm_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.673714] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/export_rrm_msgs__rosidl_generator_cppExport.cmake\n'}
+[4.673895] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/export_rrm_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.674071] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/export_rrm_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.674253] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rrm_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.674430] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rrm_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.674612] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rrm_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[4.674788] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rrm_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.674974] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/export_rrm_msgs__rosidl_generator_pyExport.cmake\n'}
+[4.675149] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/export_rrm_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.675320] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[4.675488] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.675654] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.675828] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.675990] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.676157] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.676331] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.676500] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rrm_msgsConfig.cmake\n'}
+[4.676640] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/cmake/rrm_msgsConfig-version.cmake\n'}
+[4.676806] (rrm_msgs) StdoutLine: {'line': b'-- Installing: /home/rrm/install/rrm_msgs/share/rrm_msgs/package.xml\n'}
+[4.678579] (rrm_msgs) CommandEnded: {'returncode': 0}
+[4.704491] (rrm_msgs) JobEnded: {'identifier': 'rrm_msgs', 'rc': 0}
+[4.705605] (cv2) JobStarted: {'identifier': 'cv2'}
+[4.707330] (-) TimerEvent: {}
+[4.709326] (rrm_sim) JobStarted: {'identifier': 'rrm_sim'}
+[4.714567] (cv2) JobProgress: {'identifier': 'cv2', 'progress': 'cmake'}
+[4.715066] (cv2) Command: {'cmd': ['/usr/bin/cmake', '/home/rrm/src/cv2', '-DCMAKE_INSTALL_PREFIX=/home/rrm/install/cv2'], 'cwd': '/home/rrm/build/cv2', 'env': OrderedDict([('HOSTNAME', 'yehor-desktop'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/rrm/install/rrm_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/rrm/src'), ('TERM_PROGRAM_VERSION', '1.106.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-ced0e13c-6bb2-4994-917a-0ba4e852400f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/rrm/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-471fc31f3a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('AMENT_PREFIX_PATH', '/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/rrm/build/cv2'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble')]), 'shell': False}
+[4.718294] (rrm_sim) JobProgress: {'identifier': 'rrm_sim', 'progress': 'cmake'}
+[4.718998] (rrm_sim) Command: {'cmd': ['/usr/bin/cmake', '/home/rrm/src/rrm_sim', '-DCMAKE_INSTALL_PREFIX=/home/rrm/install/rrm_sim'], 'cwd': '/home/rrm/build/rrm_sim', 'env': OrderedDict([('HOSTNAME', 'yehor-desktop'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/rrm/install/rrm_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/rrm/src'), ('TERM_PROGRAM_VERSION', '1.106.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-ced0e13c-6bb2-4994-917a-0ba4e852400f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/rrm/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-471fc31f3a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('AMENT_PREFIX_PATH', '/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/rrm/build/rrm_sim'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble')]), 'shell': False}
+[4.782636] (cv2) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[4.790499] (rrm_sim) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[4.807437] (-) TimerEvent: {}
+[4.847153] (cv2) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[4.855212] (cv2) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.858481] (rrm_sim) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[4.869173] (rrm_sim) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.907500] (-) TimerEvent: {}
+[4.919642] (cv2) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.926901] (cv2) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.927114] (cv2) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.927672] (cv2) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.928507] (rrm_sim) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.931384] (cv2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.941585] (rrm_sim) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.941772] (rrm_sim) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.941870] (rrm_sim) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.949493] (rrm_sim) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[5.007605] (-) TimerEvent: {}
+[5.013769] (rrm_sim) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.028452] (rrm_sim) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.028668] (rrm_sim) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.033603] (rrm_sim) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.033804] (cv2) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.033907] (rrm_sim) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[5.042925] (cv2) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.043147] (cv2) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.043522] (cv2) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.046737] (cv2) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[5.067903] (cv1) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable cv1_node\x1b[0m\n'}
+[5.107699] (-) TimerEvent: {}
+[5.172241] (cv1) StdoutLine: {'line': b'[100%] Built target cv1_node\n'}
+[5.178769] (rrm_sim) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[5.184532] (cv2) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[5.190970] (cv1) CommandEnded: {'returncode': 0}
+[5.191542] (cv1) JobProgress: {'identifier': 'cv1', 'progress': 'install'}
+[5.192047] (cv1) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rrm/build/cv1'], 'cwd': '/home/rrm/build/cv1', 'env': OrderedDict([('HOSTNAME', 'yehor-desktop'), ('GIT_ASKPASS', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/helpers/browser.sh'), ('HOME', '/root'), ('OLDPWD', '/home/rrm/src'), ('TERM_PROGRAM_VERSION', '1.106.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-ced0e13c-6bb2-4994-917a-0ba4e852400f.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/node'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('COLCON_PREFIX_PATH', '/home/rrm/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/root/.vscode-server/bin/1e3c50d64110be466c0b4a45222e81d2c9352888/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock","/root/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':1.0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-471fc31f3a.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-1b00e4c3-ae5f-4ea2-9642-b1549f7db77c.sock'), ('AMENT_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/rrm/build/cv1'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rrm/install/cv1:/opt/ros/humble')]), 'shell': False}
+[5.197247] (cv1) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[5.197461] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/lib/cv1/cv1_node\n'}
+[5.197972] (cv1) StdoutLine: {'line': b'-- Set runtime path of "/home/rrm/install/cv1/lib/cv1/cv1_node" to ""\n'}
+[5.198109] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/ament_index/resource_index/package_run_dependencies/cv1\n'}
+[5.198238] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/ament_index/resource_index/parent_prefix_path/cv1\n'}
+[5.198462] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/cv1/environment/ament_prefix_path.sh\n'}
+[5.198624] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/cv1/environment/ament_prefix_path.dsv\n'}
+[5.198789] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/cv1/environment/path.sh\n'}
+[5.198953] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/cv1/environment/path.dsv\n'}
+[5.199114] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/cv1/local_setup.bash\n'}
+[5.199277] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/cv1/local_setup.sh\n'}
+[5.199446] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/cv1/local_setup.zsh\n'}
+[5.199619] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/cv1/local_setup.dsv\n'}
+[5.199786] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/cv1/package.dsv\n'}
+[5.199988] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/ament_index/resource_index/packages/cv1\n'}
+[5.200186] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/cv1/cmake/cv1Config.cmake\n'}
+[5.200331] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/cv1/cmake/cv1Config-version.cmake\n'}
+[5.200500] (cv1) StdoutLine: {'line': b'-- Installing: /home/rrm/install/cv1/share/cv1/package.xml\n'}
+[5.202001] (cv1) CommandEnded: {'returncode': 0}
+[5.207771] (-) TimerEvent: {}
+[5.216209] (cv1) JobEnded: {'identifier': 'cv1', 'rc': 0}
+[5.280175] (rrm_sim) StdoutLine: {'line': b'-- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[5.280553] (cv2) StdoutLine: {'line': b'-- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[5.307872] (-) TimerEvent: {}
+[5.316597] (rrm_sim) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[5.317727] (cv2) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[5.322536] (rrm_sim) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[5.324437] (cv2) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[5.332788] (rrm_sim) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[5.334876] (cv2) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[5.344643] (rrm_sim) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.345017] (cv2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.359466] (rrm_sim) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.360861] (cv2) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.400251] (rrm_sim) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[5.400399] (cv2) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[5.402553] (cv2) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[5.402666] (rrm_sim) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[5.407913] (-) TimerEvent: {}
+[5.475292] (rrm_sim) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[5.477309] (cv2) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[5.508024] (-) TimerEvent: {}
+[5.508349] (cv2) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[5.508507] (rrm_sim) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[5.550107] (cv2) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[5.551034] (rrm_sim) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[5.557759] (cv2) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[5.559699] (rrm_sim) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[5.608157] (-) TimerEvent: {}
+[5.616475] (cv2) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[5.616642] (rrm_sim) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[5.616837] (cv2) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[5.617004] (rrm_sim) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[5.677034] (cv2) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[5.678215] (cv2) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[5.682179] (rrm_sim) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[5.683143] (rrm_sim) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[5.708251] (-) TimerEvent: {}
+[5.726649] (cv2) StdoutLine: {'line': b'-- Found rrm_msgs: 0.0.0 (/home/rrm/install/rrm_msgs/share/rrm_msgs/cmake)\n'}
+[5.731436] (rrm_sim) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[5.735352] (cv2) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[5.771908] (rrm_sim) StdoutLine: {'line': b'-- Found rrm_msgs: 0.0.0 (/home/rrm/install/rrm_msgs/share/rrm_msgs/cmake)\n'}
+[5.774544] (cv2) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[5.784543] (rrm_sim) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[5.808342] (-) TimerEvent: {}
+[5.859252] (cv2) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[5.859428] (cv2) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/rrm/src/cv2/include>\n'}
+[5.859502] (cv2) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[5.859963] (cv2) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[5.860825] (cv2) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[5.860903] (cv2) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[5.861242] (cv2) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[5.862268] (cv2) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.865731] (cv2) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:14 (add_executable):\n'}
+[5.865889] (cv2) StderrLine: {'line': b'  Cannot find source file:\n'}
+[5.865949] (cv2) StderrLine: {'line': b'\n'}
+[5.865998] (cv2) StderrLine: {'line': b'    src/cv2_node.cpp\n'}
+[5.866046] (cv2) StderrLine: {'line': b'\n'}
+[5.866098] (cv2) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h\n'}
+[5.866147] (cv2) StderrLine: {'line': b'  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc\n'}
+[5.866195] (cv2) StderrLine: {'line': b'\n'}
+[5.866241] (cv2) StderrLine: {'line': b'\x1b[0m\n'}
+[5.866706] (cv2) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:15 (add_executable):\n'}
+[5.866833] (cv2) StderrLine: {'line': b'  Cannot find source file:\n'}
+[5.866929] (cv2) StderrLine: {'line': b'\n'}
+[5.867019] (cv2) StderrLine: {'line': b'    src/logger_node.cpp\n'}
+[5.867108] (cv2) StderrLine: {'line': b'\n'}
+[5.867196] (cv2) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm .h\n'}
+[5.867283] (cv2) StderrLine: {'line': b'  .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90 .f95 .f03 .hip .ispc\n'}
+[5.867369] (cv2) StderrLine: {'line': b'\n'}
+[5.867596] (cv2) StderrLine: {'line': b'\x1b[0m\n'}
+[5.867706] (cv2) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:14 (add_executable):\n'}
+[5.867798] (cv2) StderrLine: {'line': b'  No SOURCES given to target: cv2_node\n'}
+[5.867884] (cv2) StderrLine: {'line': b'\n'}
+[5.867969] (cv2) StderrLine: {'line': b'\x1b[0m\n'}
+[5.868052] (cv2) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:15 (add_executable):\n'}
+[5.868150] (cv2) StderrLine: {'line': b'  No SOURCES given to target: logger_node\n'}
+[5.868237] (cv2) StderrLine: {'line': b'\n'}
+[5.868323] (cv2) StderrLine: {'line': b'\x1b[0m\n'}
+[5.868407] (cv2) StderrLine: {'line': b'\x1b[0mCMake Generate step failed.  Build files cannot be regenerated correctly.\x1b[0m\n'}
+[5.870720] (rrm_sim) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[5.871827] (rrm_sim) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[5.871965] (rrm_sim) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/rrm/src/rrm_sim/include>\n'}
+[5.872037] (rrm_sim) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[5.872902] (rrm_sim) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[5.873000] (rrm_sim) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[5.873691] (rrm_sim) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[5.874730] (rrm_sim) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[5.874838] (rrm_sim) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[5.875264] (rrm_sim) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[5.876547] (rrm_sim) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.877776] (cv2) CommandEnded: {'returncode': 1}
+[5.886850] (rrm_sim) StdoutLine: {'line': b'-- Generating done\n'}
+[5.889449] (cv2) JobEnded: {'identifier': 'cv2', 'rc': 1}
+[5.890748] (rrm_sim) StdoutLine: {'line': b'-- Build files have been written to: /home/rrm/build/rrm_sim\n'}
+[5.897747] (rrm_sim) JobEnded: {'identifier': 'rrm_sim', 'rc': 'SIGINT'}
+[5.908519] (-) TimerEvent: {}
+[5.912927] (-) EventReactorShutdown: {}

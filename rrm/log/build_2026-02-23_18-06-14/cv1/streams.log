@@ -1,0 +1,22 @@
+[0.021s] Invoking command in '/home/rrm/build/cv1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/build/cv1 -- -j8 -l8
+[0.062s] [100%] Built target cv1_node
+[0.079s] Invoked command in '/home/rrm/build/cv1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/build/cv1 -- -j8 -l8
+[0.080s] Invoking command in '/home/rrm/build/cv1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/build/cv1
+[0.089s] -- Install configuration: ""
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/lib/cv1/cv1_node
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/ament_index/resource_index/package_run_dependencies/cv1
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/ament_index/resource_index/parent_prefix_path/cv1
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/cv1/environment/ament_prefix_path.sh
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/cv1/environment/ament_prefix_path.dsv
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/cv1/environment/path.sh
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/cv1/environment/path.dsv
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/cv1/local_setup.bash
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/cv1/local_setup.sh
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/cv1/local_setup.zsh
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/cv1/local_setup.dsv
+[0.089s] -- Installing: /home/rrm/install/cv1/share/cv1/package.dsv
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/ament_index/resource_index/packages/cv1
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/cv1/cmake/cv1Config.cmake
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/cv1/cmake/cv1Config-version.cmake
+[0.089s] -- Up-to-date: /home/rrm/install/cv1/share/cv1/package.xml
+[0.113s] Invoked command in '/home/rrm/build/cv1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/build/cv1

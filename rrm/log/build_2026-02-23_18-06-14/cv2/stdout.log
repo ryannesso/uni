@@ -1,0 +1,9 @@
+[35m[1mConsolidate compiler generated dependencies of target logger_node[0m
+[ 50%] Built target cv2_node
+[ 75%] [32mBuilding CXX object CMakeFiles/logger_node.dir/src/joint_logger.cpp.o[0m
+[100%] [32m[1mLinking CXX executable logger_node[0m
+[100%] Built target logger_node
+-- Install configuration: ""
+-- Up-to-date: /home/rrm/install/cv2/lib/cv2/cv2_node
+-- Installing: /home/rrm/install/cv2/lib/cv2/logger_node
+-- Set runtime path of "/home/rrm/install/cv2/lib/cv2/logger_node" to ""

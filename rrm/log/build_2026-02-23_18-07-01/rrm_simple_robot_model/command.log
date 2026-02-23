@@ -1,0 +1,4 @@
+Invoking command in '/home/rrm/build/rrm_simple_robot_model': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/build/rrm_simple_robot_model -- -j8 -l8
+Invoked command in '/home/rrm/build/rrm_simple_robot_model' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/build/rrm_simple_robot_model -- -j8 -l8
+Invoking command in '/home/rrm/build/rrm_simple_robot_model': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/build/rrm_simple_robot_model
+Invoked command in '/home/rrm/build/rrm_simple_robot_model' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/build/rrm_simple_robot_model

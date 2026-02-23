@@ -1,0 +1,8 @@
+source;share/rrm_simple_robot_model/hook/cmake_prefix_path.ps1
+source;share/rrm_simple_robot_model/hook/cmake_prefix_path.dsv
+source;share/rrm_simple_robot_model/hook/cmake_prefix_path.sh
+source;share/rrm_simple_robot_model/local_setup.bash
+source;share/rrm_simple_robot_model/local_setup.dsv
+source;share/rrm_simple_robot_model/local_setup.ps1
+source;share/rrm_simple_robot_model/local_setup.sh
+source;share/rrm_simple_robot_model/local_setup.zsh

@@ -1,0 +1,10 @@
+setup.py
+rrm_msgs/__init__.py
+rrm_msgs.egg-info/PKG-INFO
+rrm_msgs.egg-info/SOURCES.txt
+rrm_msgs.egg-info/dependency_links.txt
+rrm_msgs.egg-info/top_level.txt
+rrm_msgs/msg/__init__.py
+rrm_msgs/msg/_command.py
+rrm_msgs/srv/__init__.py
+rrm_msgs/srv/_command.py

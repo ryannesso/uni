@@ -1,0 +1,31 @@
+f = @testfn3c;
+d = 1;
+minimum = 0;
+best_min = 0;
+
+fplot(f, [-1000, 1000], 'k'); 
+hold on; grid on;
+
+current_x = -1000 + 2000 * rand();
+for step = 1:1000
+    current_y = f(current_x);
+    y_l = f(current_x - d);
+    y_r = f(current_x + d);
+
+    if y_l < current_y && y_l <= y_r
+        current_x = current_x - d;
+    elseif y_r < current_y
+        current_x = current_x + d;
+    else
+        minimum = f(current_x);
+        if(minimum < f(current_x))
+            
+        end
+        current_x = -1000 + 2000 * rand();
+    end
+end
+plot(current_x, f(current_x), 'rx', 'MarkerSize', 12, 'LineWidth', 2);
+fprintf("miinimum y: %.2f \n", f(current_x));
+fprintf("step %.2d \n", step);
+fprintf("min %.2f \n", minimum);
+fprintf("min2 %.2f \n", best_min);

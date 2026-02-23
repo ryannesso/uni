@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rrm_msgs/srv/Command.srv
+// generated code does not contain a copyright notice
+
+
+module rrm_msgs {
+  module srv {
+    struct Command_Request {
+      sequence<double> positions;
+
+      sequence<double> velocities;
+    };
+    struct Command_Response {
+      int32 result_code;
+
+      string message;
+    };
+  };
+};

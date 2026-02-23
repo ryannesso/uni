@@ -1,0 +1,11 @@
+[01m[K/home/rrm/src/cv2/src/teleop.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/rrm/src/cv2/src/teleop.cpp:26:49:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kstd[m[K’
+   26 |         std::cout << "input join and position: "
+      |                                                 [01;31m[K^[m[K
+      |                                                 [32m[K;[m[K
+   27 |         [32m[Kstd[m[K::cin >> joint_id >> position;
+      |         [32m[K~~~[m[K                                      
+gmake[2]: *** [CMakeFiles/cv2_node.dir/build.make:76: CMakeFiles/cv2_node.dir/src/teleop.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/cv2_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

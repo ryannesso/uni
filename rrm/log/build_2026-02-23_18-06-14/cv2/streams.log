@@ -1,0 +1,18 @@
+[0.013s] Invoking command in '/home/rrm/build/cv2': CMAKE_PREFIX_PATH=/home/rrm/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/cv1:/opt/ros/humble /usr/bin/cmake --build /home/rrm/build/cv2 -- -j8 -l8
+[0.050s] [35m[1mConsolidate compiler generated dependencies of target logger_node[0m
+[0.062s] [ 50%] Built target cv2_node
+[0.070s] [ 75%] [32mBuilding CXX object CMakeFiles/logger_node.dir/src/joint_logger.cpp.o[0m
+[7.750s] [100%] [32m[1mLinking CXX executable logger_node[0m
+[8.123s] [100%] Built target logger_node
+[8.132s] Invoked command in '/home/rrm/build/cv2' returned '0': CMAKE_PREFIX_PATH=/home/rrm/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/cv1:/opt/ros/humble /usr/bin/cmake --build /home/rrm/build/cv2 -- -j8 -l8
+[8.134s] Invoking command in '/home/rrm/build/cv2': CMAKE_PREFIX_PATH=/home/rrm/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/cv1:/opt/ros/humble /usr/bin/cmake --install /home/rrm/build/cv2
+[8.139s] -- Install configuration: ""
+[8.139s] -- Up-to-date: /home/rrm/install/cv2/lib/cv2/cv2_node
+[8.139s] -- Installing: /home/rrm/install/cv2/lib/cv2/logger_node
+[8.143s] -- Set runtime path of "/home/rrm/install/cv2/lib/cv2/logger_node" to ""
+[8.143s] [31mCMake Error at cmake_install.cmake:86 (file):
+[8.143s]   file INSTALL cannot find "/home/rrm/src/cv2/launch": No such file or
+[8.143s]   directory.
+[8.143s] 
+[8.143s] [0m
+[8.144s] Invoked command in '/home/rrm/build/cv2' returned '1': CMAKE_PREFIX_PATH=/home/rrm/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/cv1:/opt/ros/humble /usr/bin/cmake --install /home/rrm/build/cv2

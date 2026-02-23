@@ -1,0 +1,26 @@
+[35m[1mConsolidate compiler generated dependencies of target cv2_node[0m
+[35m[1mConsolidate compiler generated dependencies of target logger_node[0m
+[ 50%] Built target logger_node
+[ 75%] [32mBuilding CXX object CMakeFiles/cv2_node.dir/src/teleop.cpp.o[0m
+[100%] [32m[1mLinking CXX executable cv2_node[0m
+[100%] Built target cv2_node
+-- Install configuration: ""
+-- Installing: /home/rrm/install/cv2/lib/cv2/cv2_node
+-- Set runtime path of "/home/rrm/install/cv2/lib/cv2/cv2_node" to ""
+-- Installing: /home/rrm/install/cv2/lib/cv2/logger_node
+-- Set runtime path of "/home/rrm/install/cv2/lib/cv2/logger_node" to ""
+-- Installing: /home/rrm/install/cv2/share/ament_index/resource_index/package_run_dependencies/cv2
+-- Installing: /home/rrm/install/cv2/share/ament_index/resource_index/parent_prefix_path/cv2
+-- Installing: /home/rrm/install/cv2/share/cv2/environment/ament_prefix_path.sh
+-- Installing: /home/rrm/install/cv2/share/cv2/environment/ament_prefix_path.dsv
+-- Installing: /home/rrm/install/cv2/share/cv2/environment/path.sh
+-- Installing: /home/rrm/install/cv2/share/cv2/environment/path.dsv
+-- Installing: /home/rrm/install/cv2/share/cv2/local_setup.bash
+-- Installing: /home/rrm/install/cv2/share/cv2/local_setup.sh
+-- Installing: /home/rrm/install/cv2/share/cv2/local_setup.zsh
+-- Installing: /home/rrm/install/cv2/share/cv2/local_setup.dsv
+-- Installing: /home/rrm/install/cv2/share/cv2/package.dsv
+-- Installing: /home/rrm/install/cv2/share/ament_index/resource_index/packages/cv2
+-- Installing: /home/rrm/install/cv2/share/cv2/cmake/cv2Config.cmake
+-- Installing: /home/rrm/install/cv2/share/cv2/cmake/cv2Config-version.cmake
+-- Installing: /home/rrm/install/cv2/share/cv2/package.xml

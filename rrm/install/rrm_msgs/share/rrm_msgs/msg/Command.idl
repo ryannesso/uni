@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from rrm_msgs/msg/Command.msg
+// generated code does not contain a copyright notice
+
+
+module rrm_msgs {
+  module msg {
+    struct Command {
+      int32 joint_id;
+
+      double position;
+    };
+  };
+};

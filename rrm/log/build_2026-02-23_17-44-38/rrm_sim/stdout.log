@@ -1,0 +1,4 @@
+[ 66%] [32mBuilding CXX object CMakeFiles/robot_sim_node.dir/src/robot_sim_node.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/robot_sim_node.dir/src/motion.cpp.o[0m
+[100%] [32m[1mLinking CXX executable robot_sim_node[0m
+[100%] Built target robot_sim_node

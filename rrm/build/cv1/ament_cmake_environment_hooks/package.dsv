@@ -1,0 +1,4 @@
+source;share/cv1/local_setup.bash
+source;share/cv1/local_setup.dsv
+source;share/cv1/local_setup.sh
+source;share/cv1/local_setup.zsh

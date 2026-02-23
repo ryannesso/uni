@@ -1,0 +1,2 @@
+Invoking command in '/home/rrm/build/cv2': CMAKE_PREFIX_PATH=/home/rrm/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/cv1:/opt/ros/humble /usr/bin/cmake --build /home/rrm/build/cv2 -- -j8 -l8
+Invoked command in '/home/rrm/build/cv2' returned '2': CMAKE_PREFIX_PATH=/home/rrm/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/cv1:/opt/ros/humble /usr/bin/cmake --build /home/rrm/build/cv2 -- -j8 -l8

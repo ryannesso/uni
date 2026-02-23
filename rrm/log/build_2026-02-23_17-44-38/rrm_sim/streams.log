@@ -1,0 +1,5 @@
+[0.010s] Invoking command in '/home/rrm/build/rrm_sim': AMENT_PREFIX_PATH=/home/rrm/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/build/rrm_sim -- -j8 -l8
+[0.054s] [ 66%] [32mBuilding CXX object CMakeFiles/robot_sim_node.dir/src/robot_sim_node.cpp.o[0m
+[0.054s] [ 66%] [32mBuilding CXX object CMakeFiles/robot_sim_node.dir/src/motion.cpp.o[0m
+[8.793s] [100%] [32m[1mLinking CXX executable robot_sim_node[0m
+[9.230s] [100%] Built target robot_sim_node
