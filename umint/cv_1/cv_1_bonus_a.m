@@ -1,5 +1,7 @@
 f = @testfn3c;
 d = 5;
+best_min = inf;
+best_x = 0;
 
 fplot(f, [-1000, 1000], 'k'); 
 hold on; grid on;
@@ -8,8 +10,7 @@ current_x = -1000 + 2000 * rand();
 
 for step = 1:1000
     current_y = f(current_x);
-    
-    plot(current_x, current_y, 'r.', 'MarkerSize', 10);
+    plot(current_x, current_y, 'r.');
     drawnow limitrate;
 
     y_l = f(max(-1000, current_x - d));
@@ -20,11 +21,16 @@ for step = 1:1000
     elseif y_r < current_y
         current_x = min(1000, current_x + d);
     else
-        break;
+        if current_y < best_min
+            best_min = current_y;
+            best_x = current_x;
+        end
+        current_x = -1000 + 2000 * rand();
     end
 end
 
-plot(current_x, f(current_x), 'go', 'MarkerSize', 12, 'MarkerFaceColor', 'g');
+plot(best_x, best_min, 'go', 'MarkerSize', 12, 'MarkerFaceColor', 'g', 'LineWidth', 2);
 
-fprintf('Finalna poloha: x = %.4f, f(x) = %.4f\n', current_x, f(current_x));
-fprintf('Pocet krokov: %d\n', step);
+fprintf("minimum y: %.2f \n", best_min);
+fprintf("best x: %.2f \n", best_x);
+fprintf("total steps: %d \n", step);
