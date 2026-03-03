@@ -1,0 +1,12 @@
+<launch>
+  <include file="$(find-pkg-share rrm_sim)/launch/rrm_sim.launch.xml">
+    <arg name="rviz2" value="false" />
+  </include>
+
+  <node pkg="rviz2" exec="rviz2" name="rviz2" 
+        args="-d $(find-pkg-share cv3)/config/cv3.rviz" />
+
+  <node pkg="cv3" exec="logger_node" name="logger" output="screen" />
+
+  <node pkg="cv3" exec="cv3_node" name="teleop" output="screen" launch-prefix="xterm -e" />
+</launch> 
