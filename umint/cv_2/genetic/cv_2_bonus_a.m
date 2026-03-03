@@ -1,62 +1,51 @@
 nVar = 100;
-popSize = 50;  
-maxGen = 1000;    
-mutRate = 0.01; 
+popSize = 80;
+maxGen = 1500;
+mutRate = 0.01;
+
 runs = 5;
-Space = [repmat(-1000,1,nVar); repmat(1000,1,nVar)];
-
-figure('Color', 'w');
+figure;
 hold on; grid on; 
-colors = ['r', 'g', 'b', 'k', 'm'];
 
-overallBestFit = inf;
-overallBestX = [];
+colors = ['r', 'g', 'b', 'k', 'm']; 
 
-for run = 1:runs
+for run = 1:runs 
+    Space = [repmat(-1000,1,nVar); repmat(1000,1,nVar)];
+    elitismCnt = 10;
+
+    %init population
     population = genrpop(popSize, Space);
-    history = zeros(1, maxGen);
-    
-    fprintf('Spúšťam beh č. %d...\n', run);
+    bestFitness = zeros(1, maxGen);
 
     for gen = 1:maxGen
         fitness = testfn3c(population);
-        [bestVal, bestIdx] = min(fitness);
-        history(gen) = bestVal;
-        
-        if bestVal < overallBestFit
-            overallBestFit = bestVal;
-            overallBestX = population(bestIdx, :);
-        end
-    
+        [currentMin, minIdx] = min(fitness);
+        bestFitness(gen) = currentMin;
+
+        Nums = ones(1, elitismCnt);
+        [ParentsBest, ~] = selbest(population, fitness, Nums);
+        numExtra = size(population, 1) - elitismCnt;
+        [ParentsExtra, ~] = seltourn(population, fitness, numExtra);
         population = change(population, 2, Space);
-    
-        [~, sortIdx] = sort(fitness);
-        elites = population(sortIdx(1:5), :);
-    
-        ParentsExtra = seltourn(population, fitness, popSize - 5);
-    
+
         offSpring = crossov(ParentsExtra, 2, 0);
-    
-        ampVal = 500 * (1 - gen/maxGen)^3 + 0.5; 
-        Amp = repmat(ampVal, 1, nVar);
-    
+        %offSpring = intmedx(ParentsExtra, 1.25);
+        %offSpring = around(ParentsExtra, 0, 1.25, Space);
+        Amp = repmat(1600 * 0.05, 1, nVar);
+
         offSpring = mutx(offSpring, mutRate, Space);
         offSpring = muta(offSpring, mutRate, Amp, Space);
-    
-        population = [elites; offSpring];
+
+        finalPopulation = [ParentsBest; offSpring];
+        population = finalPopulation;
     end
     
-    plot(1:maxGen, history, colors(run), 'LineWidth', 1.2); 
+    plot(1:maxGen, bestFitness, colors(run), 'LineWidth', 1.2); 
+    fprintf('Beh %d: Najlepšie fitness = %.4f\n', run, bestFitness(end));
 end
 
-title('100-D Schwefel (Optimized GA) - 5 Run Comparison');
-xlabel('Generácie');
-ylabel('Fitness');
-legend('Beh 1', 'Beh 2', 'Beh 3', 'Beh 4', 'Beh 5');
-
-fprintf('\n====================================================\n');
-fprintf('VÝSLEDKY PRE SPRÁVU:\n');
-fprintf('Najlepšie celkové fitness: %.4f\n', overallBestFit);
-fprintf('Súradnice najlepšieho jedinca (prvých 5 génov): ');
-disp(overallBestX(1:5));
-fprintf('====================================================\n');
+xlabel('generations');
+ylabel('fitness value');
+title('evolution of fitness over multiple runs');
+legend('Run 1', 'Run 2', 'Run 3', 'Run 4', 'Run 5'); 
+hold off;
