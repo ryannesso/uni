@@ -8,10 +8,10 @@ B = [
     20, 82; 49, 0;   62, 14; 7, 60;  0, 0
 ];
 
-popSize = 500;      
+popSize = 100;      
 elitismCount = 5; 
-mutationRate = 0.12;
-numGenerations = 500;
+mutationRate = 0.1;
+numGenerations = 1500;
 numRuns = 10;
 
 allRunsFitness = zeros(numGenerations, numRuns);
@@ -39,13 +39,12 @@ for runs = 1:numRuns
         BestFit = BestFit(:);
     
         remainingCount = popSize - elitismCount;
-        [SelectedPop, ~] = selsus(Pop, fitnessValues, remainingCount);
+        [SelectedPop, ~] = seltourn(Pop, fitnessValues, remainingCount);
     
         NewPop = crosord(SelectedPop, 0); 
-    
-        NewPop(:, 2:end-1) = swapgen(NewPop(:, 2:end-1), mutationRate);
         NewPop(:, 2:end-1) = swappart(NewPop(:, 2:end-1), mutationRate);
-        NewPop(:, 2:end-1) = invord(NewPop(:, 2:end-1), mutationRate);
+        NewPop(:, 2:end-1) = swapgen(NewPop(:, 2:end-1), 0.01);
+        NewPop(:, 2:end-1) = invord(NewPop(:, 2:end-1), 0.3);
 
         NewFit = fitness_cv_3(NewPop, B);
     
@@ -69,14 +68,13 @@ disp(B(globalBestRoute, :));
 
 figure('Color', 'w');
 hold on;
-cmap = lines(numRuns);
-for i = 1:numRuns
-    plot(allRunsFitness(:, i), 'Color', cmap(i,:), 'LineWidth', 1.5, 'DisplayName', ['run ', num2str(i)]);
-end
+avgFitness = mean(allRunsFitness, 2);
+hRuns = plot(allRunsFitness, 'Color', [0.7 0.7 0.7], 'LineWidth', 1.8);
+hAvg = plot(avgFitness, 'r', 'LineWidth', 3);
 xlabel('generation');
 ylabel('best fitness (length)');
-title('fitness convergence for all runs');
-legend('show', 'location', 'northeast');
+title('fitness vs generation (all runs and average)');
+legend([hRuns(1), hAvg], {'individual runs', 'average convergence'}, 'location', 'northeast');
 grid on;
 
 figure('Color', 'w');
