@@ -10,8 +10,8 @@ B = [
 
 popSize = 100;      
 elitismCount = 5; 
-mutationRate = 0.12;
-numGenerations = 2500;
+mutationRate = 0.1;
+numGenerations = 1500;
 numRuns = 10;
 
 allRunsFitness = zeros(numGenerations, numRuns);
@@ -39,12 +39,12 @@ for runs = 1:numRuns
         BestFit = BestFit(:);
     
         remainingCount = popSize - elitismCount;
-        [SelectedPop, ~] = selsus(Pop, fitnessValues, remainingCount);
+        [SelectedPop, ~] = seltourn(Pop, fitnessValues, remainingCount);
     
         NewPop = crosord(SelectedPop, 0); 
         NewPop(:, 2:end-1) = swappart(NewPop(:, 2:end-1), mutationRate);
-        NewPop(:, 2:end-1) = swapgen(NewPop(:, 2:end-1), mutationRate);
-        NewPop(:, 2:end-1) = invord(NewPop(:, 2:end-1), mutationRate);
+        NewPop(:, 2:end-1) = swapgen(NewPop(:, 2:end-1), 0.01);
+        NewPop(:, 2:end-1) = invord(NewPop(:, 2:end-1), 0.3);
 
         NewFit = fitness_cv_3(NewPop, B);
     
@@ -69,7 +69,7 @@ disp(B(globalBestRoute, :));
 figure('Color', 'w');
 hold on;
 avgFitness = mean(allRunsFitness, 2);
-hRuns = plot(allRunsFitness, 'Color', [0.7 0.7 0.7], 'LineWidth', 0.8);
+hRuns = plot(allRunsFitness, 'Color', [0.7 0.7 0.7], 'LineWidth', 1.8);
 hAvg = plot(avgFitness, 'r', 'LineWidth', 3);
 xlabel('generation');
 ylabel('best fitness (length)');
