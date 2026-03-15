@@ -1,0 +1,795 @@
+[
+    {
+        "id": "a22ae17a5542cbfc",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "05346c1107f5fc9b",
+        "type": "OpcUa-Endpoint",
+        "endpoint": "opc.tcp://147.175.108.8:4840",
+        "secpol": "None",
+        "secmode": "None",
+        "none": true,
+        "login": false,
+        "usercert": false,
+        "usercertificate": "",
+        "userprivatekey": ""
+    },
+    {
+        "id": "99f8898f370c445b",
+        "type": "thingspeak42",
+        "z": "a22ae17a5542cbfc",
+        "name": "TS",
+        "delay": "15",
+        "topic1": "availability",
+        "topic2": "performance",
+        "topic3": "quality",
+        "topic4": "OEE",
+        "topic5": "",
+        "topic6": "",
+        "topic7": "",
+        "topic8": "",
+        "endpoint": "https://api.thingspeak.com",
+        "x": 1230,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "85d6bf3c144741ea",
+        "type": "inject",
+        "z": "a22ae17a5542cbfc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "availability",
+        "payload": "79",
+        "payloadType": "num",
+        "x": 510,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d05c552eb5e90e64",
+        "type": "inject",
+        "z": "a22ae17a5542cbfc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "performance",
+        "payload": "96",
+        "payloadType": "num",
+        "x": 480,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b20ae18d869b35e3",
+        "type": "inject",
+        "z": "a22ae17a5542cbfc",
+        "name": "Producted",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "ns=3;s=\"dbUN01_Labeler\".\"counter\".\"productProcessed\".\"count\" ",
+        "payload": "",
+        "payloadType": "date",
+        "x": 430,
+        "y": 380,
+        "wires": [
+            [
+                "4828b161685ef913"
+            ]
+        ]
+    },
+    {
+        "id": "5f87a53a6df8be53",
+        "type": "debug",
+        "z": "a22ae17a5542cbfc",
+        "name": "Test",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6d09fa4eed264cba",
+        "type": "inject",
+        "z": "a22ae17a5542cbfc",
+        "name": "Producted: defective",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.2",
+        "topic": "ns=3;s=\"dbUN01_Labeler\".\"counter\".\"productDefective\".\"count\"",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 440,
+        "wires": [
+            [
+                "254a79d7ab776263"
+            ]
+        ]
+    },
+    {
+        "id": "6ca878b16e153904",
+        "type": "inject",
+        "z": "a22ae17a5542cbfc",
+        "name": "Wanted speed",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.3",
+        "topic": "ns=3;s=\"dbUN01_OMACPackTags\".\"status\".\"MachSpeed\" ",
+        "payload": "",
+        "payloadType": "date",
+        "x": 420,
+        "y": 500,
+        "wires": [
+            [
+                "d83caa53bff5698e"
+            ]
+        ]
+    },
+    {
+        "id": "0054afaa327d3e22",
+        "type": "inject",
+        "z": "a22ae17a5542cbfc",
+        "name": "Actual speed",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.4",
+        "topic": "ns=3;s=\"dbUN01_OMACPackTags\".\"status\".\"CurMachSpeed\" ",
+        "payload": "",
+        "payloadType": "date",
+        "x": 420,
+        "y": 560,
+        "wires": [
+            [
+                "aa85f38b47a46500"
+            ]
+        ]
+    },
+    {
+        "id": "bf3cf312bdea9058",
+        "type": "inject",
+        "z": "a22ae17a5542cbfc",
+        "name": "Cumulative time",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "ns=3;s=\"dbUN01_OMACPackTags\".\"admin\".\"StateCumulativeTime\" ",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 620,
+        "wires": [
+            [
+                "c72b3492e641c6cf"
+            ]
+        ]
+    },
+    {
+        "id": "ed32330c9f8e3e8e",
+        "type": "inject",
+        "z": "a22ae17a5542cbfc",
+        "name": "Current mode",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=3;s=\"dbUN01_OMACPackTags\".\"status\".\"StateCurrent\" ",
+        "payload": "",
+        "payloadType": "date",
+        "x": 430,
+        "y": 160,
+        "wires": [
+            [
+                "772b64ccf06039a9"
+            ]
+        ]
+    },
+    {
+        "id": "7a911a8c5b418d1a",
+        "type": "inject",
+        "z": "a22ae17a5542cbfc",
+        "name": "Current state",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "ns=3;s=\"dbUN01_OMACPackTags\".\"stateCurrentLocalizedText\"",
+        "payload": "",
+        "payloadType": "date",
+        "x": 430,
+        "y": 220,
+        "wires": [
+            [
+                "69a0dfbc0cca477a"
+            ]
+        ]
+    },
+    {
+        "id": "772b64ccf06039a9",
+        "type": "OpcUa-Client",
+        "z": "a22ae17a5542cbfc",
+        "endpoint": "05346c1107f5fc9b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "setstatusandtime": false,
+        "keepsessionalive": false,
+        "name": "",
+        "x": 680,
+        "y": 240,
+        "wires": [
+            [
+                "5f87a53a6df8be53"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "69a0dfbc0cca477a",
+        "type": "OpcUa-Client",
+        "z": "a22ae17a5542cbfc",
+        "endpoint": "05346c1107f5fc9b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "setstatusandtime": false,
+        "keepsessionalive": false,
+        "name": "",
+        "x": 680,
+        "y": 320,
+        "wires": [
+            [
+                "5f87a53a6df8be53"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "4828b161685ef913",
+        "type": "OpcUa-Client",
+        "z": "a22ae17a5542cbfc",
+        "endpoint": "05346c1107f5fc9b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "setstatusandtime": false,
+        "keepsessionalive": false,
+        "name": "",
+        "x": 680,
+        "y": 380,
+        "wires": [
+            [
+                "5f87a53a6df8be53",
+                "c4d71a8019ffb3bc"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "254a79d7ab776263",
+        "type": "OpcUa-Client",
+        "z": "a22ae17a5542cbfc",
+        "endpoint": "05346c1107f5fc9b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "setstatusandtime": false,
+        "keepsessionalive": false,
+        "name": "",
+        "x": 680,
+        "y": 440,
+        "wires": [
+            [
+                "5f87a53a6df8be53",
+                "c4d71a8019ffb3bc"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d83caa53bff5698e",
+        "type": "OpcUa-Client",
+        "z": "a22ae17a5542cbfc",
+        "endpoint": "05346c1107f5fc9b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "setstatusandtime": false,
+        "keepsessionalive": false,
+        "name": "",
+        "x": 680,
+        "y": 500,
+        "wires": [
+            [
+                "5f87a53a6df8be53",
+                "c4d71a8019ffb3bc"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "aa85f38b47a46500",
+        "type": "OpcUa-Client",
+        "z": "a22ae17a5542cbfc",
+        "endpoint": "05346c1107f5fc9b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "setstatusandtime": false,
+        "keepsessionalive": false,
+        "name": "",
+        "x": 680,
+        "y": 560,
+        "wires": [
+            [
+                "5f87a53a6df8be53",
+                "c4d71a8019ffb3bc"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c72b3492e641c6cf",
+        "type": "OpcUa-Client",
+        "z": "a22ae17a5542cbfc",
+        "endpoint": "05346c1107f5fc9b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "setstatusandtime": false,
+        "keepsessionalive": false,
+        "name": "",
+        "x": 680,
+        "y": 620,
+        "wires": [
+            [
+                "5f87a53a6df8be53",
+                "c4d71a8019ffb3bc"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "057fcb7181075187",
+        "type": "OpcUa-Client",
+        "z": "a22ae17a5542cbfc",
+        "endpoint": "05346c1107f5fc9b",
+        "action": "read",
+        "deadbandtype": "a",
+        "deadbandvalue": 1,
+        "time": 10,
+        "timeUnit": "s",
+        "certificate": "n",
+        "localfile": "",
+        "localkeyfile": "",
+        "securitymode": "None",
+        "securitypolicy": "None",
+        "useTransport": false,
+        "maxChunkCount": 1,
+        "maxMessageSize": 8192,
+        "receiveBufferSize": 8192,
+        "sendBufferSize": 8192,
+        "setstatusandtime": false,
+        "keepsessionalive": false,
+        "name": "",
+        "x": 680,
+        "y": 680,
+        "wires": [
+            [
+                "5f87a53a6df8be53",
+                "c4d71a8019ffb3bc"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a53e451260f73857",
+        "type": "inject",
+        "z": "a22ae17a5542cbfc",
+        "name": "Time since reset",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "30",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.6",
+        "topic": "ns=3;s=\"dbUN01_Labeler\".\"MSM\".\"times\".\"accTimeSinceReset\"",
+        "payload": "",
+        "payloadType": "date",
+        "x": 410,
+        "y": 680,
+        "wires": [
+            [
+                "057fcb7181075187"
+            ]
+        ]
+    },
+    {
+        "id": "3a65b2beb23cef9f",
+        "type": "join",
+        "z": "a22ae17a5542cbfc",
+        "name": "Performance+quality",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": true,
+        "timeout": "",
+        "count": "4",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1110,
+        "y": 60,
+        "wires": [
+            [
+                "ddeca18a07c2d2e5"
+            ]
+        ]
+    },
+    {
+        "id": "ddeca18a07c2d2e5",
+        "type": "function",
+        "z": "a22ae17a5542cbfc",
+        "name": "Calc qual+perf",
+        "func": "const data = msg.payload;\n\nconst produced = data['ns=3;s=\"dbUN01_Labeler\".\"counter\".\"productProcessed\".\"count\" '];\nconst defective = data['ns=3;s=\"dbUN01_Labeler\".\"counter\".\"productDefective\".\"count\"'];\nconst wantedSpeed = data['ns=3;s=\"dbUN01_OMACPackTags\".\"status\".\"MachSpeed\" '];\nconst actualSpeed = data['ns=3;s=\"dbUN01_OMACPackTags\".\"status\".\"CurMachSpeed\" '];\n\nconst quality = (produced - defective) / produced;\nconst performance = actualSpeed / wantedSpeed;\n\nmsg.payload = {\n    //produced,\n    //defective,\n    //wantedSpeed,\n    //actualSpeed,\n    quality,\n    performance\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1320,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cdfc8734beb92a2b",
+        "type": "debug",
+        "z": "a22ae17a5542cbfc",
+        "name": "Test3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "6404624780f63174",
+        "type": "join",
+        "z": "a22ae17a5542cbfc",
+        "name": "Availability",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": true,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1100,
+        "y": 100,
+        "wires": [
+            [
+                "3c3c2b9cc7c418ca"
+            ]
+        ]
+    },
+    {
+        "id": "3c3c2b9cc7c418ca",
+        "type": "function",
+        "z": "a22ae17a5542cbfc",
+        "name": "function 1",
+        "func": "let cumulativeTime = msg.payload['ns=3;s=\"dbUN01_OMACPackTags\".\"admin\".\"StateCumulativeTime\" '];\nlet accTimeReset = msg.payload['ns=3;s=\"dbUN01_Labeler\".\"MSM\".\"times\".\"accTimeSinceReset\"'];\n\n\nlet productionTime = cumulativeTime[24]; // либо другой индекс, если другая логика нужна\n\nproductionTime = Math.abs(productionTime);\naccTimeReset = Math.abs(accTimeReset);\n\nlet availability = accTimeReset !== 0 ? productionTime / accTimeReset : 0;\n\nmsg.payload = {\n    //productionTime: productionTime,\n    //accTimeSinceReset: accTimeReset,\n    availability: availability \n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1320,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c4d71a8019ffb3bc",
+        "type": "join",
+        "z": "a22ae17a5542cbfc",
+        "name": "all6",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "6",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 950,
+        "y": 480,
+        "wires": [
+            [
+                "44d0f4dc9973e0fb"
+            ]
+        ]
+    },
+    {
+        "id": "07c8ead032cda0cc",
+        "type": "function",
+        "z": "a22ae17a5542cbfc",
+        "name": "all6",
+        "func": "let cumulativeTime = msg.payload['ns=3;s=\"dbUN01_OMACPackTags\".\"admin\".\"StateCumulativeTime\" '];\nlet accTimeReset = msg.payload['ns=3;s=\"dbUN01_Labeler\".\"MSM\".\"times\".\"accTimeSinceReset\"'];\n\n\nlet produced = msg.payload['ns=3;s=\"dbUN01_Labeler\".\"counter\".\"productProcessed\".\"count\" '];\nlet defective = msg.payload['ns=3;s=\"dbUN01_Labeler\".\"counter\".\"productDefective\".\"count\"'];\nlet wantedSpeed = msg.payload['ns=3;s=\"dbUN01_OMACPackTags\".\"status\".\"MachSpeed\" '];\nlet actualSpeed = msg.payload['ns=3;s=\"dbUN01_OMACPackTags\".\"status\".\"CurMachSpeed\" '];\n\nlet quality = (produced - defective) / produced;\nlet performance = actualSpeed / wantedSpeed;\nlet productionTime = cumulativeTime[24]; \n\nproductionTime = Math.abs(productionTime);\naccTimeReset = Math.abs(accTimeReset);\n\nlet availability = accTimeReset !== 0 ? productionTime / accTimeReset : 0;\n\nlet OEE = quality * availability * performance;\n\nmsg.payload = {\n    //produced,\n    //defective,\n    //wantedSpeed,\n    //actualSpeed,\n    quality,\n    performance,\n    //productionTime: productionTime,\n    //accTimeSinceReset: accTimeReset,\n    availability: availability,\n    OEE: OEE \n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 400,
+        "wires": [
+            [
+                "cdfc8734beb92a2b"
+            ]
+        ]
+    },
+    {
+        "id": "44d0f4dc9973e0fb",
+        "type": "function",
+        "z": "a22ae17a5542cbfc",
+        "name": "all6+ts",
+        "func": "let cumulativeTime = msg.payload['ns=3;s=\"dbUN01_OMACPackTags\".\"admin\".\"StateCumulativeTime\" '];\nlet accTimeReset = msg.payload['ns=3;s=\"dbUN01_Labeler\".\"MSM\".\"times\".\"accTimeSinceReset\"'];\n\nlet produced = msg.payload['ns=3;s=\"dbUN01_Labeler\".\"counter\".\"productProcessed\".\"count\" '];\nlet defective = msg.payload['ns=3;s=\"dbUN01_Labeler\".\"counter\".\"productDefective\".\"count\"'];\nlet wantedSpeed = msg.payload['ns=3;s=\"dbUN01_OMACPackTags\".\"status\".\"MachSpeed\" '];\nlet actualSpeed = msg.payload['ns=3;s=\"dbUN01_OMACPackTags\".\"status\".\"CurMachSpeed\" '];\n\nlet quality = (produced - defective) / produced;\nlet performance = actualSpeed / wantedSpeed;\nlet productionTime = cumulativeTime[24];\n\nproductionTime = Math.abs(productionTime);\naccTimeReset = Math.abs(accTimeReset);\n\nlet availability = accTimeReset !== 0 ? productionTime / accTimeReset : 0;\n\nlet OEE = quality * availability * performance;\n\n// Формируем 4 отдельных сообщения\nlet messages = [\n    { topic: \"quality\", payload: quality },\n    { topic: \"performance\", payload: performance },\n    { topic: \"availability\", payload: availability },\n    { topic: \"OEE\", payload: OEE }\n];\n\n// Отправляем их по очереди из одного выхода\nmessages.forEach(m => node.send(m));\n\n// Не возвращаем ничего, потому что node.send уже отработал\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 480,
+        "wires": [
+            [
+                "cdfc8734beb92a2b",
+                "99f8898f370c445b"
+            ]
+        ]
+    }
+]
