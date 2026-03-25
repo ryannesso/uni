@@ -1,0 +1,23 @@
+[0.019s] Invoking command in '/home/rrm/src/build/cv1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/src/build/cv1 -- -j8 -l8
+[0.052s] [35m[1mConsolidate compiler generated dependencies of target cv1_node[0m
+[0.079s] [100%] Built target cv1_node
+[0.118s] Invoked command in '/home/rrm/src/build/cv1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/src/build/cv1 -- -j8 -l8
+[0.119s] Invoking command in '/home/rrm/src/build/cv1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/src/build/cv1
+[0.127s] -- Install configuration: ""
+[0.127s] -- Up-to-date: /home/rrm/src/install/cv1/lib/cv1/cv1_node
+[0.127s] -- Up-to-date: /home/rrm/src/install/cv1/share/ament_index/resource_index/package_run_dependencies/cv1
+[0.127s] -- Up-to-date: /home/rrm/src/install/cv1/share/ament_index/resource_index/parent_prefix_path/cv1
+[0.127s] -- Up-to-date: /home/rrm/src/install/cv1/share/cv1/environment/ament_prefix_path.sh
+[0.127s] -- Up-to-date: /home/rrm/src/install/cv1/share/cv1/environment/ament_prefix_path.dsv
+[0.128s] -- Up-to-date: /home/rrm/src/install/cv1/share/cv1/environment/path.sh
+[0.128s] -- Up-to-date: /home/rrm/src/install/cv1/share/cv1/environment/path.dsv
+[0.128s] -- Up-to-date: /home/rrm/src/install/cv1/share/cv1/local_setup.bash
+[0.128s] -- Up-to-date: /home/rrm/src/install/cv1/share/cv1/local_setup.sh
+[0.128s] -- Up-to-date: /home/rrm/src/install/cv1/share/cv1/local_setup.zsh
+[0.128s] -- Up-to-date: /home/rrm/src/install/cv1/share/cv1/local_setup.dsv
+[0.128s] -- Installing: /home/rrm/src/install/cv1/share/cv1/package.dsv
+[0.128s] -- Up-to-date: /home/rrm/src/install/cv1/share/ament_index/resource_index/packages/cv1
+[0.128s] -- Up-to-date: /home/rrm/src/install/cv1/share/cv1/cmake/cv1Config.cmake
+[0.128s] -- Up-to-date: /home/rrm/src/install/cv1/share/cv1/cmake/cv1Config-version.cmake
+[0.129s] -- Up-to-date: /home/rrm/src/install/cv1/share/cv1/package.xml
+[0.131s] Invoked command in '/home/rrm/src/build/cv1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/src/build/cv1

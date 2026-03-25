@@ -1,0 +1,28 @@
+[0.018s] Invoking command in '/home/rrm/src/build/cv2': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/cv2 -- -j8 -l8
+[0.067s] [ 50%] Built target cv2_node
+[0.067s] [100%] Built target logger_node
+[0.080s] Invoked command in '/home/rrm/src/build/cv2' returned '0': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/cv2 -- -j8 -l8
+[0.082s] Invoking command in '/home/rrm/src/build/cv2': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rrm/src/build/cv2
+[0.088s] -- Install configuration: ""
+[0.088s] -- Up-to-date: /home/rrm/src/install/cv2/lib/cv2/cv2_node
+[0.089s] -- Up-to-date: /home/rrm/src/install/cv2/lib/cv2/logger_node
+[0.091s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2//launch
+[0.092s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2//launch/cv2.launch.xml
+[0.092s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2//config
+[0.092s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2//config/cv2.rviz
+[0.095s] -- Up-to-date: /home/rrm/src/install/cv2/share/ament_index/resource_index/package_run_dependencies/cv2
+[0.096s] -- Up-to-date: /home/rrm/src/install/cv2/share/ament_index/resource_index/parent_prefix_path/cv2
+[0.096s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2/environment/ament_prefix_path.sh
+[0.097s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2/environment/ament_prefix_path.dsv
+[0.097s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2/environment/path.sh
+[0.097s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2/environment/path.dsv
+[0.097s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2/local_setup.bash
+[0.097s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2/local_setup.sh
+[0.097s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2/local_setup.zsh
+[0.098s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2/local_setup.dsv
+[0.098s] -- Installing: /home/rrm/src/install/cv2/share/cv2/package.dsv
+[0.098s] -- Up-to-date: /home/rrm/src/install/cv2/share/ament_index/resource_index/packages/cv2
+[0.098s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2/cmake/cv2Config.cmake
+[0.098s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2/cmake/cv2Config-version.cmake
+[0.098s] -- Up-to-date: /home/rrm/src/install/cv2/share/cv2/package.xml
+[0.099s] Invoked command in '/home/rrm/src/build/cv2' returned '0': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rrm/src/build/cv2

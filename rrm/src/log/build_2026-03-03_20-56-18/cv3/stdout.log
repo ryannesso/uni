@@ -1,0 +1,29 @@
+[35m[1mConsolidate compiler generated dependencies of target logger_node[0m
+[ 50%] Built target cv3_node
+[ 75%] [32mBuilding CXX object CMakeFiles/logger_node.dir/src/joint_logger.cpp.o[0m
+[100%] [32m[1mLinking CXX executable logger_node[0m
+[100%] Built target logger_node
+-- Install configuration: ""
+-- Installing: /home/rrm/src/install/cv3/lib/cv3/cv3_node
+-- Set runtime path of "/home/rrm/src/install/cv3/lib/cv3/cv3_node" to ""
+-- Installing: /home/rrm/src/install/cv3/lib/cv3/logger_node
+-- Set runtime path of "/home/rrm/src/install/cv3/lib/cv3/logger_node" to ""
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3//launch
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3//launch/cv3.launch.xml
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3//config
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3//config/cv3.rviz
+-- Up-to-date: /home/rrm/src/install/cv3/share/ament_index/resource_index/package_run_dependencies/cv3
+-- Up-to-date: /home/rrm/src/install/cv3/share/ament_index/resource_index/parent_prefix_path/cv3
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3/environment/ament_prefix_path.sh
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3/environment/path.sh
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3/environment/path.dsv
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3/local_setup.bash
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3/local_setup.sh
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3/local_setup.zsh
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3/local_setup.dsv
+-- Installing: /home/rrm/src/install/cv3/share/cv3/package.dsv
+-- Up-to-date: /home/rrm/src/install/cv3/share/ament_index/resource_index/packages/cv3
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3/cmake/cv3Config.cmake
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3/cmake/cv3Config-version.cmake
+-- Up-to-date: /home/rrm/src/install/cv3/share/cv3/package.xml

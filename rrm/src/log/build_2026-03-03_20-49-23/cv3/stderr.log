@@ -1,0 +1,166 @@
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:[m[K In member function ‘[01m[Kbool Teleop::move(const std::vector<double, std::allocator<double> >&, double)[m[K’:
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:20:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kvecror[m[K’ is not a member of ‘[01m[Kstd[m[K’; did you mean ‘[01m[Kvector[m[K’?
+   20 |         std::[01;31m[Kvecror[m[K<double> distances(positions.size());
+      |              [01;31m[K^~~~~~[m[K
+      |              [32m[Kvector[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:20:21:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kdouble[m[K’
+   20 |         std::vecror<[01;31m[Kdouble[m[K> distances(positions.size());
+      |                     [01;31m[K^~~~~~[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:24:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kdistances[m[K’ was not declared in this scope
+   24 |             [01;31m[Kdistances[m[K[i] = std::abs(positions[i] - current_positions[i]);
+      |             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:24:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_positions[m[K’ was not declared in this scope; did you mean ‘[01m[Kcurrent_positions_[m[K’?
+   24 |             distances[i] = std::abs(positions[i] - [01;31m[Kcurrent_positions[m[K[i]);
+      |                                                    [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                                    [32m[Kcurrent_positions_[m[K
+[01m[K/home/rrm/src/cv3/src/joint_logger.cpp:[m[K In member function ‘[01m[Kvoid JointLogger::joint_states_callback(sensor_msgs::msg::JointState_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/rrm/src/cv3/src/joint_logger.cpp:11:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_positions_[m[K’ was not declared in this scope
+   11 |     [01;31m[Kcurrent_positions_[m[K = msg->position;
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:34:40:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_positions[m[K’ was not declared in this scope; did you mean ‘[01m[Kcurrent_positions_[m[K’?
+   34 |         std::vector<double> velocities([01;31m[Ktarget_positions[m[K.size(), 0.0);
+      |                                        [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |                                        [32m[Kcurrent_positions_[m[K
+[01m[K/home/rrm/src/cv3/src/joint_logger.cpp:14:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kcommand_sent_[m[K’ was not declared in this scope
+   14 |     if (![01;31m[Kcommand_sent_[m[K) {
+      |          [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/rrm/src/cv3/src/joint_logger.cpp:23:28:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmove(std::vector<double, std::allocator<double> >&, double&)[m[K’
+   23 |         bool success = [01;31m[Kmove(test_target, test_velocity)[m[K;
+      |                        [01;31m[K~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/bits/stl_pair.h:59[m[K,
+                 from [01m[K/usr/include/c++/11/bits/stl_algobase.h:64[m[K,
+                 from [01m[K/usr/include/c++/11/memory:63[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/rrm/src/cv3/include/cv3/logger_node.hpp:3[m[K,
+                 from [01m[K/home/rrm/src/cv3/src/joint_logger.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/move.h:104:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr typename std::remove_reference<_Tp>::type&& std::move(_Tp&&)[m[K’
+  104 |     [01;36m[Kmove[m[K(_Tp&& __t) noexcept
+      |     [01;36m[K^~~~[m[K
+[01m[K/usr/include/c++/11/bits/move.h:104:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/rrm/src/cv3/src/joint_logger.cpp:23:28:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+   23 |         bool success = [01;36m[Kmove(test_target, test_velocity)[m[K;
+      |                        [01;36m[K~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:63[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+                 from [01m[K/home/rrm/src/cv3/include/cv3/logger_node.hpp:3[m[K,
+                 from [01m[K/home/rrm/src/cv3/src/joint_logger.cpp:1[m[K:
+[01m[K/usr/include/c++/11/bits/stl_algobase.h:644:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _II, class _OI> _OI std::move(_II, _II, _OI)[m[K’
+  644 |     [01;36m[Kmove[m[K(_II __first, _II __last, _OI __result)
+      |     [01;36m[K^~~~[m[K
+[01m[K/usr/include/c++/11/bits/stl_algobase.h:644:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/rrm/src/cv3/src/joint_logger.cpp:23:28:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[K_II[m[K’ (‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’ and ‘[01m[Kdouble[m[K’)
+   23 |         bool success = [01;36m[Kmove(test_target, test_velocity)[m[K;
+      |                        [01;36m[K~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/algorithm:74[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/rrm/src/cv3/include/cv3/logger_node.hpp:3[m[K,
+                 from [01m[K/home/rrm/src/cv3/src/joint_logger.cpp:1[m[K:
+[01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:353:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2> __pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator> std::move(_ExecutionPolicy&&, _ForwardIterator1, _ForwardIterator1, _ForwardIterator2)[m[K’
+  353 | [01;36m[Kmove[m[K(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __d_first);
+      | [01;36m[K^~~~[m[K
+[01m[K/usr/include/c++/11/pstl/glue_algorithm_defs.h:353:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/rrm/src/cv3/src/joint_logger.cpp:23:28:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 2 provided
+   23 |         bool success = [01;36m[Kmove(test_target, test_velocity)[m[K;
+      |                        [01;36m[K~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:38:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kdistances[m[K’ was not declared in this scope
+   38 |                 velocities[i] = [01;31m[Kdistances[m[K[i] / time;
+      |                                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:89:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclient_[m[K’ was not declared in this scope
+   89 |     while (![01;31m[Kclient_[m[K ->wait_for_service (std::chrono::seconds (1))) {
+      |             [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/rrm/src/cv3/src/teleop.cpp:1[m[K:
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:91:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   91 |         RCLCPP_ERROR ([01;31m[Kthis[m[K->get_logger (), "Interrupted while waiting for the service. Exiting." );
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:91:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:91:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   91 |         [01;31m[KRCLCPP_ERROR[m[K (this->get_logger (), "Interrupted while waiting for the service. Exiting." );
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/rrm/src/cv3/src/teleop.cpp:1[m[K:
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:91:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   91 |         RCLCPP_ERROR ([01;31m[Kthis[m[K->get_logger (), "Interrupted while waiting for the service. Exiting." );
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:91:23:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   91 |         RCLCPP_ERROR ([01;31m[Kthis[m[K->get_logger (), "Interrupted while waiting for the service. Exiting." );
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:92:9:[m[K [01;31m[Kerror: [m[Kreturn-statement with no value, in function returning ‘[01m[Kint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+   92 |         [01;31m[Kreturn[m[K;
+      |         [01;31m[K^~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/rrm/src/cv3/src/teleop.cpp:1[m[K:
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:94:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   94 |         RCLCPP_INFO ([01;31m[Kthis[m[K->get_logger (), "Service not available, waiting again..." );
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:94:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:94:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   94 |         [01;31m[KRCLCPP_INFO[m[K (this->get_logger (), "Service not available, waiting again..." );
+      |         [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/rrm/src/cv3/src/teleop.cpp:1[m[K:
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:94:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   94 |         RCLCPP_INFO ([01;31m[Kthis[m[K->get_logger (), "Service not available, waiting again..." );
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:94:22:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   94 |         RCLCPP_INFO ([01;31m[Kthis[m[K->get_logger (), "Service not available, waiting again..." );
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:99:20:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kint[m[K’ to ‘[01m[Kconst std::vector<double, std::allocator<double> >&[m[K’
+   99 |         robot.move([01;31m[Kjoint_id[m[K, position);
+      |                    [01;31m[K^~~~~~~~[m[K
+      |                    [01;31m[K|[m[K
+      |                    [01;31m[Kint[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:19:42:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kbool Teleop::move(const std::vector<double, std::allocator<double> >&, double)[m[K’
+   19 |     bool move([01;36m[Kconst std::vector<double>& positions[m[K, double max_velocity) {
+      |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/rrm/src/cv3/src/teleop.cpp:88:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcommand_sent_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   88 |     bool [01;35m[Kcommand_sent_[m[K = false;
+      |          [01;35m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/cv3_node.dir/build.make:76: CMakeFiles/cv3_node.dir/src/teleop.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/cv3_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/logger_node.dir/build.make:76: CMakeFiles/logger_node.dir/src/joint_logger.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/logger_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

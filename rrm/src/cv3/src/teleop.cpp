@@ -19,7 +19,7 @@ public:
     
     size_t get_joints_count() const { return current_positions_.size(); }
 
-void move(const std::vector<double>& target, double max_vel) {
+    void move(const std::vector<double>& target, double max_vel) {
         if (current_positions_.empty()) return; 
 
         std::vector<double> dists(target.size());
@@ -41,25 +41,10 @@ void move(const std::vector<double>& target, double max_vel) {
         req->positions = target;
         req->velocities = vels;
         
-    if (!client_->wait_for_service(std::chrono::seconds(1))) {
-        RCLCPP_ERROR(this->get_logger(), "Service not available!");
-        return;
+        if(client_->wait_for_service(std::chrono::seconds(1))) {
+            client_->async_send_request(req);
+        }
     }
-
-    // 2. Отправляем запрос
-    auto future = client_->async_send_request(req);
-    
-    // 3. Ждем ответа, используя спиннинг (это важно!)
-    // rclcpp::spin_until_future_complete "крутит" ROS, пока не придет ответ
-    auto status = rclcpp::spin_until_future_complete(this->get_node_base_interface(), future, std::chrono::seconds(10));
-    
-    if (status == rclcpp::FutureReturnCode::SUCCESS) {
-        auto response = future.get(); // Теперь это гарантированно не заблокирует код навсегда
-        RCLCPP_INFO(this->get_logger(), "Response: %s (code: %d)", response->message.c_str(), response->result_code);
-    } else {
-        RCLCPP_ERROR(this->get_logger(), "Service call failed!");
-    }
- }
 
 private:
     rclcpp::Client<rrm_msgs::srv::Command>::SharedPtr client_;

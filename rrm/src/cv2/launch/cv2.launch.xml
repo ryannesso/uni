@@ -9,4 +9,4 @@
   <node pkg="cv2" exec="logger_node" name="logger" output="screen" />
 
   <node pkg="cv2" exec="cv2_node" name="teleop" output="screen" launch-prefix="xterm -e" />
-</launch>
+</launch> 

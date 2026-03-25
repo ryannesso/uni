@@ -1,0 +1,70 @@
+% Príklad na aproximáciu nelin. funkcie pomocou NS typu
+% MLP siet s 1 vstupom a 1 výstupom
+clear
+load datafun
+
+% vytvorenie štruktúry NS 
+% 1 vstup - x suradnica
+% 1 skrytá vrstva s poctom neurónov 25 s funkciou 'tansig'
+% 1 výstup s funkciou 'purelin' - y suradnica
+% trénovacia metóda - Levenberg-Marquardt
+pocet_neuronov=26;
+net=fitnet(pocet_neuronov);
+
+% % vyber rozdelenia
+% net.divideFcn='dividerand'; % náhodné rozdelenie
+
+% % net.divideFcn='divideblock'; % blokove
+
+% net.divideFcn='divideint';  % kazdy n-ta vzorka
+
+% %net.divideFcn='dividetrain';  % iba trenovacie
+
+% net.divideParam.trainRatio=0.6;
+% net.divideParam.valRatio=0;
+% net.divideParam.testRatio=0.4;
+
+
+net.divideFcn='divideind';      % indexove
+net.divideParam.trainInd=indx_train;
+net.divideParam.valInd=[];
+net.divideParam.testInd=indx_test;
+
+
+% Nastavenie parametrov trénovania
+net.trainParam.goal = 1e-4;      
+net.trainParam.show = 5;        
+net.trainParam.epochs = 100;      
+
+[net, tr]=train(net,x,y);
+
+view(net);
+
+% Simulácia výstupu NS
+outnetsim = sim(net,x);
+
+
+% vypocet chyby siete
+y1=y(indx_train); % ocakavane
+y2=y(indx_test); % ocakavane
+y1sim = outnetsim(indx_train);
+y2sim = outnetsim(indx_test);
+
+SSE_train = sum((y1 - y1sim).^2);
+MSE_train = mean((y1 - y1sim).^2);
+MAE_train = max(abs(y1 - y1sim));
+
+SSE_test = sum((y2 - y2sim).^2);
+MSE_test = mean((y2 - y2sim).^2);
+MAE_test = max(abs(y2 - y2sim));
+
+fprintf('Trénovacie dáta:\nSSE = %.6f\nMSE = %.6f\nMAE = %.6f\n', SSE_train, MSE_train, MAE_train);
+fprintf('Testovacie dáta:\nSSE = %.6f\nMSE = %.6f\nMAE = %.6f\n', SSE_test, MSE_test, MAE_test);
+
+% Vykreslenie priebehov
+figure
+plot(x(indx_train),y1,'b+',x(indx_test),y2,'g*')
+hold on
+plot(x,outnetsim,'-or')
+
+figure, plotperform(tr)

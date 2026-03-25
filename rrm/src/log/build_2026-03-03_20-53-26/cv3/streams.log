@@ -1,0 +1,19 @@
+[0.020s] Invoking command in '/home/rrm/src/build/cv3': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/cv3 -- -j8 -l8
+[0.078s] [ 25%] [32mBuilding CXX object CMakeFiles/logger_node.dir/src/joint_logger.cpp.o[0m
+[0.079s] [ 50%] [32mBuilding CXX object CMakeFiles/cv3_node.dir/src/teleop.cpp.o[0m
+[0.295s] [01m[K/home/rrm/src/cv3/src/teleop.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Krrm_msgs/msg/Command.hpp: No such file or directory
+[0.296s]     2 | #include [01;31m[K"rrm_msgs/msg/Command.hpp"[m[K
+[0.296s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.296s] compilation terminated.
+[0.298s] gmake[2]: *** [CMakeFiles/cv3_node.dir/build.make:76: CMakeFiles/cv3_node.dir/src/teleop.cpp.o] Error 1
+[0.298s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/cv3_node.dir/all] Error 2
+[0.298s] gmake[1]: *** Waiting for unfinished jobs....
+[0.303s] In file included from [01m[K/home/rrm/src/cv3/src/joint_logger.cpp:1[m[K:
+[0.303s] [01m[K/home/rrm/src/cv3/include/cv3/logger_node.hpp:6:10:[m[K [01;31m[Kfatal error: [m[Krrm_msgs/srv/command.hpp: No such file or directory
+[0.303s]     6 | #include [01;31m[K"rrm_msgs/srv/command.hpp"[m[K
+[0.303s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.304s] compilation terminated.
+[0.306s] gmake[2]: *** [CMakeFiles/logger_node.dir/build.make:76: CMakeFiles/logger_node.dir/src/joint_logger.cpp.o] Error 1
+[0.309s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/logger_node.dir/all] Error 2
+[0.309s] gmake: *** [Makefile:146: all] Error 2
+[0.313s] Invoked command in '/home/rrm/src/build/cv3' returned '2': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/cv3 -- -j8 -l8

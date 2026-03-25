@@ -1,0 +1,12 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/logger_node.dir/src/joint_logger.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/cv3_node.dir/src/teleop.cpp.o[0m
+[01m[K/home/rrm/src/cv3/src/joint_logger.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kcv2/logger_node.hpp: No such file or directory
+    1 | #include [01;31m[K"cv2/logger_node.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/logger_node.dir/build.make:76: CMakeFiles/logger_node.dir/src/joint_logger.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/logger_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 75%] [32m[1mLinking CXX executable cv3_node[0m
+[ 75%] Built target cv3_node
+gmake: *** [Makefile:146: all] Error 2

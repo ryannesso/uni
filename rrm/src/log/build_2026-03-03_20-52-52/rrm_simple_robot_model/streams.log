@@ -1,0 +1,27 @@
+[0.016s] Invoking command in '/home/rrm/src/build/rrm_simple_robot_model': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/src/build/rrm_simple_robot_model -- -j8 -l8
+[0.048s] Invoked command in '/home/rrm/src/build/rrm_simple_robot_model' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/src/build/rrm_simple_robot_model -- -j8 -l8
+[0.063s] Invoking command in '/home/rrm/src/build/rrm_simple_robot_model': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/src/build/rrm_simple_robot_model
+[0.071s] -- Install configuration: ""
+[0.071s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/urdf
+[0.071s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/urdf/arm.urdf
+[0.071s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/config
+[0.071s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/config/rrm_cv3.rviz
+[0.072s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/launch
+[0.072s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/launch/robot_state_publisher.launch.xml
+[0.072s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/launch/robot_state_publisher.launch.py
+[0.073s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/ament_index/resource_index/package_run_dependencies/rrm_simple_robot_model
+[0.073s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/ament_index/resource_index/parent_prefix_path/rrm_simple_robot_model
+[0.073s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/environment/ament_prefix_path.sh
+[0.074s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/environment/ament_prefix_path.dsv
+[0.074s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/environment/path.sh
+[0.074s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/environment/path.dsv
+[0.074s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/local_setup.bash
+[0.074s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/local_setup.sh
+[0.074s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/local_setup.zsh
+[0.074s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/local_setup.dsv
+[0.074s] -- Installing: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.dsv
+[0.074s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/ament_index/resource_index/packages/rrm_simple_robot_model
+[0.074s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/cmake/rrm_simple_robot_modelConfig.cmake
+[0.075s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/cmake/rrm_simple_robot_modelConfig-version.cmake
+[0.075s] -- Up-to-date: /home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.xml
+[0.076s] Invoked command in '/home/rrm/src/build/rrm_simple_robot_model' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/src/build/rrm_simple_robot_model

@@ -1,0 +1,12 @@
+In file included from [01m[K/home/rrm/src/cv3/src/joint_logger.cpp:1[m[K:
+[01m[K/home/rrm/src/cv3/include/cv3/logger_node.hpp:10:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kz[m[K’ does not name a type
+   10 |     private:[01;31m[Kz[m[K
+      |             [01;31m[K^[m[K
+[01m[K/home/rrm/src/cv3/src/joint_logger.cpp:[m[K In constructor ‘[01m[KJointLogger::JointLogger()[m[K’:
+[01m[K/home/rrm/src/cv3/src/joint_logger.cpp:5:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+    5 |     [01;31m[Ksubscription_[m[K = this->create_subscription<sensor_msgs::msg::JointState>(
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+      |     [32m[Krmw_subscription_t[m[K
+gmake[2]: *** [CMakeFiles/logger_node.dir/build.make:76: CMakeFiles/logger_node.dir/src/joint_logger.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/logger_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,33 @@
+[0.015s] Invoking command in '/home/rrm/src/build/cv3': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/cv3 -- -j8 -l8
+[0.052s] [35m[1mConsolidate compiler generated dependencies of target logger_node[0m
+[0.069s] [ 50%] Built target cv3_node
+[0.078s] [ 75%] [32mBuilding CXX object CMakeFiles/logger_node.dir/src/joint_logger.cpp.o[0m
+[7.177s] [100%] [32m[1mLinking CXX executable logger_node[0m
+[7.529s] [100%] Built target logger_node
+[7.539s] Invoked command in '/home/rrm/src/build/cv3' returned '0': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/cv3 -- -j8 -l8
+[7.540s] Invoking command in '/home/rrm/src/build/cv3': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rrm/src/build/cv3
+[7.546s] -- Install configuration: ""
+[7.546s] -- Installing: /home/rrm/src/install/cv3/lib/cv3/cv3_node
+[7.547s] -- Set runtime path of "/home/rrm/src/install/cv3/lib/cv3/cv3_node" to ""
+[7.548s] -- Installing: /home/rrm/src/install/cv3/lib/cv3/logger_node
+[7.551s] -- Set runtime path of "/home/rrm/src/install/cv3/lib/cv3/logger_node" to ""
+[7.551s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3//launch
+[7.551s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3//launch/cv3.launch.xml
+[7.551s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3//config
+[7.551s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3//config/cv3.rviz
+[7.551s] -- Up-to-date: /home/rrm/src/install/cv3/share/ament_index/resource_index/package_run_dependencies/cv3
+[7.551s] -- Up-to-date: /home/rrm/src/install/cv3/share/ament_index/resource_index/parent_prefix_path/cv3
+[7.552s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3/environment/ament_prefix_path.sh
+[7.552s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3/environment/ament_prefix_path.dsv
+[7.552s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3/environment/path.sh
+[7.552s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3/environment/path.dsv
+[7.552s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3/local_setup.bash
+[7.552s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3/local_setup.sh
+[7.552s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3/local_setup.zsh
+[7.552s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3/local_setup.dsv
+[7.552s] -- Installing: /home/rrm/src/install/cv3/share/cv3/package.dsv
+[7.552s] -- Up-to-date: /home/rrm/src/install/cv3/share/ament_index/resource_index/packages/cv3
+[7.552s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3/cmake/cv3Config.cmake
+[7.552s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3/cmake/cv3Config-version.cmake
+[7.553s] -- Up-to-date: /home/rrm/src/install/cv3/share/cv3/package.xml
+[7.554s] Invoked command in '/home/rrm/src/build/cv3' returned '0': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rrm/src/build/cv3

@@ -1,0 +1,4 @@
+float64 max_velocity   # Это мы отправляем (запрос)
+---
+bool success           # Это нам вернут (успех или нет)
+string message         # Текст сообщения

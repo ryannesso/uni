@@ -1,0 +1,433 @@
+[0.103s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.103s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7f5ea83af7f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f5ea83aed40>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f5ea83aed40>>, mixin_verb=('build',))
+[0.226s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.227s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/Gazebo.meta'
+[0.227s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastdds.meta'
+[0.227s] INFO:colcon.colcon_metadata.package_discovery.colcon_meta:Using configuration from '/root/.colcon/metadata/default/fastrtps.meta'
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.228s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.228s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rrm/src'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(cv1) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(cv1) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(cv1) by extension 'ignore_ament_install'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(cv1) by extensions ['colcon_pkg']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(cv1) by extension 'colcon_pkg'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(cv1) by extensions ['colcon_meta']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(cv1) by extension 'colcon_meta'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(cv1) by extensions ['ros']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(cv1) by extension 'ros'
+[0.240s] DEBUG:colcon.colcon_core.package_identification:Package 'cv1' with type 'ros.ament_cmake' and name 'cv1'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(cv2) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(cv2) by extension 'ignore'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(cv2) by extension 'ignore_ament_install'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(cv2) by extensions ['colcon_pkg']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(cv2) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(cv2) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(cv2) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(cv2) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(cv2) by extension 'ros'
+[0.241s] DEBUG:colcon.colcon_core.package_identification:Package 'cv2' with type 'ros.ament_cmake' and name 'cv2'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(cv3) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(cv3) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(cv3) by extension 'ignore_ament_install'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(cv3) by extensions ['colcon_pkg']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(cv3) by extension 'colcon_pkg'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(cv3) by extensions ['colcon_meta']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(cv3) by extension 'colcon_meta'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(cv3) by extensions ['ros']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(cv3) by extension 'ros'
+[0.242s] DEBUG:colcon.colcon_core.package_identification:Package 'cv3' with type 'ros.ament_cmake' and name 'cv3'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_msgs) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_msgs) by extension 'ignore_ament_install'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_msgs) by extensions ['colcon_pkg']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_msgs) by extension 'colcon_pkg'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_msgs) by extensions ['colcon_meta']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_msgs) by extension 'colcon_meta'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_msgs) by extensions ['ros']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_msgs) by extension 'ros'
+[0.244s] DEBUG:colcon.colcon_core.package_identification:Package 'rrm_msgs' with type 'ros.ament_cmake' and name 'rrm_msgs'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_sim) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_sim) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_sim) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_sim) by extensions ['colcon_pkg']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_sim) by extension 'colcon_pkg'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_sim) by extensions ['colcon_meta']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_sim) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_sim) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_sim) by extension 'ros'
+[0.245s] DEBUG:colcon.colcon_core.package_identification:Package 'rrm_sim' with type 'ros.ament_cmake' and name 'rrm_sim'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_simple_robot_model) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_simple_robot_model) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_simple_robot_model) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_simple_robot_model) by extensions ['colcon_pkg']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_simple_robot_model) by extension 'colcon_pkg'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_simple_robot_model) by extensions ['colcon_meta']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_simple_robot_model) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_simple_robot_model) by extensions ['ros']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(rrm_simple_robot_model) by extension 'ros'
+[0.245s] DEBUG:colcon.colcon_core.package_identification:Package 'rrm_simple_robot_model' with type 'ros.ament_cmake' and name 'rrm_simple_robot_model'
+[0.245s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.245s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.246s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.246s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.246s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'cv1' build argument 'cmake_args' from command line to 'None'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'cv1' build argument 'cmake_target' from command line to 'None'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'cv1' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'cv1' build argument 'cmake_clean_cache' from command line to 'False'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'cv1' build argument 'cmake_clean_first' from command line to 'False'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'cv1' build argument 'cmake_force_configure' from command line to 'False'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'cv1' build argument 'ament_cmake_args' from command line to 'None'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'cv1' build argument 'catkin_cmake_args' from command line to 'None'
+[0.262s] Level 5:colcon.colcon_core.verb:set package 'cv1' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.262s] DEBUG:colcon.colcon_core.verb:Building package 'cv1' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rrm/src/build/cv1', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rrm/src/install/cv1', 'merge_install': False, 'path': '/home/rrm/src/cv1', 'symlink_install': False, 'test_result_base': None}
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_msgs' build argument 'cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_msgs' build argument 'cmake_target' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.263s] DEBUG:colcon.colcon_core.verb:Building package 'rrm_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rrm/src/build/rrm_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rrm/src/install/rrm_msgs', 'merge_install': False, 'path': '/home/rrm/src/rrm_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_simple_robot_model' build argument 'cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_simple_robot_model' build argument 'cmake_target' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_simple_robot_model' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_simple_robot_model' build argument 'cmake_clean_cache' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_simple_robot_model' build argument 'cmake_clean_first' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_simple_robot_model' build argument 'cmake_force_configure' from command line to 'False'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_simple_robot_model' build argument 'ament_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_simple_robot_model' build argument 'catkin_cmake_args' from command line to 'None'
+[0.263s] Level 5:colcon.colcon_core.verb:set package 'rrm_simple_robot_model' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.264s] DEBUG:colcon.colcon_core.verb:Building package 'rrm_simple_robot_model' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rrm/src/build/rrm_simple_robot_model', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rrm/src/install/rrm_simple_robot_model', 'merge_install': False, 'path': '/home/rrm/src/rrm_simple_robot_model', 'symlink_install': False, 'test_result_base': None}
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv2' build argument 'cmake_args' from command line to 'None'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv2' build argument 'cmake_target' from command line to 'None'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv2' build argument 'cmake_clean_first' from command line to 'False'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv2' build argument 'cmake_force_configure' from command line to 'False'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv2' build argument 'ament_cmake_args' from command line to 'None'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.264s] DEBUG:colcon.colcon_core.verb:Building package 'cv2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rrm/src/build/cv2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rrm/src/install/cv2', 'merge_install': False, 'path': '/home/rrm/src/cv2', 'symlink_install': False, 'test_result_base': None}
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv3' build argument 'cmake_args' from command line to 'None'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv3' build argument 'cmake_target' from command line to 'None'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv3' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv3' build argument 'cmake_clean_cache' from command line to 'False'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv3' build argument 'cmake_clean_first' from command line to 'False'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv3' build argument 'cmake_force_configure' from command line to 'False'
+[0.264s] Level 5:colcon.colcon_core.verb:set package 'cv3' build argument 'ament_cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'cv3' build argument 'catkin_cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'cv3' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.265s] DEBUG:colcon.colcon_core.verb:Building package 'cv3' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rrm/src/build/cv3', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rrm/src/install/cv3', 'merge_install': False, 'path': '/home/rrm/src/cv3', 'symlink_install': False, 'test_result_base': None}
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'rrm_sim' build argument 'cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'rrm_sim' build argument 'cmake_target' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'rrm_sim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'rrm_sim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'rrm_sim' build argument 'cmake_clean_first' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'rrm_sim' build argument 'cmake_force_configure' from command line to 'False'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'rrm_sim' build argument 'ament_cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'rrm_sim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.265s] Level 5:colcon.colcon_core.verb:set package 'rrm_sim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.265s] DEBUG:colcon.colcon_core.verb:Building package 'rrm_sim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rrm/src/build/rrm_sim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rrm/src/install/rrm_sim', 'merge_install': False, 'path': '/home/rrm/src/rrm_sim', 'symlink_install': False, 'test_result_base': None}
+[0.265s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.266s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.266s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rrm/src/rrm_msgs' with build type 'ament_cmake'
+[0.266s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rrm/src/rrm_msgs'
+[0.268s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.268s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.268s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.272s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rrm/src/cv1' with build type 'ament_cmake'
+[0.273s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rrm/src/cv1'
+[0.273s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.273s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.277s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rrm/src/rrm_simple_robot_model' with build type 'ament_cmake'
+[0.277s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rrm/src/rrm_simple_robot_model'
+[0.277s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.277s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.288s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rrm/src/build/rrm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/src/build/rrm_msgs -- -j8 -l8
+[0.292s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rrm/src/build/cv1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/src/build/cv1 -- -j8 -l8
+[0.294s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rrm/src/build/rrm_simple_robot_model': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/src/build/rrm_simple_robot_model -- -j8 -l8
+[0.323s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rrm/src/build/rrm_simple_robot_model' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/src/build/rrm_simple_robot_model -- -j8 -l8
+[0.331s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rrm/src/build/rrm_simple_robot_model': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/src/build/rrm_simple_robot_model
+[0.339s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rrm_simple_robot_model)
+[0.344s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_simple_robot_model' for CMake module files
+[0.346s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_simple_robot_model' for CMake config files
+[0.346s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rrm/src/build/rrm_simple_robot_model' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/src/build/rrm_simple_robot_model
+[0.347s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrm_simple_robot_model', 'cmake_prefix_path')
+[0.347s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/hook/cmake_prefix_path.ps1'
+[0.348s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/hook/cmake_prefix_path.dsv'
+[0.348s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/hook/cmake_prefix_path.sh'
+[0.349s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_simple_robot_model/bin'
+[0.349s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_simple_robot_model/lib/pkgconfig/rrm_simple_robot_model.pc'
+[0.351s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_simple_robot_model/lib/python3.10/site-packages'
+[0.351s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_simple_robot_model/bin'
+[0.352s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.ps1'
+[0.353s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.dsv'
+[0.354s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.sh'
+[0.355s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.bash'
+[0.356s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.zsh'
+[0.357s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rrm/src/install/rrm_simple_robot_model/share/colcon-core/packages/rrm_simple_robot_model)
+[0.359s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rrm_simple_robot_model)
+[0.359s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_simple_robot_model' for CMake module files
+[0.360s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_simple_robot_model' for CMake config files
+[0.360s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrm_simple_robot_model', 'cmake_prefix_path')
+[0.360s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/hook/cmake_prefix_path.ps1'
+[0.373s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/hook/cmake_prefix_path.dsv'
+[0.374s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/hook/cmake_prefix_path.sh'
+[0.374s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_simple_robot_model/bin'
+[0.374s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_simple_robot_model/lib/pkgconfig/rrm_simple_robot_model.pc'
+[0.375s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_simple_robot_model/lib/python3.10/site-packages'
+[0.375s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_simple_robot_model/bin'
+[0.375s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.ps1'
+[0.376s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.dsv'
+[0.376s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.sh'
+[0.377s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.bash'
+[0.377s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_simple_robot_model/share/rrm_simple_robot_model/package.zsh'
+[0.377s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rrm/src/install/rrm_simple_robot_model/share/colcon-core/packages/rrm_simple_robot_model)
+[0.379s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rrm/src/build/cv1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/src/build/cv1 -- -j8 -l8
+[0.380s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rrm/src/build/cv1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/src/build/cv1
+[0.391s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cv1)
+[0.391s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1' for CMake module files
+[0.392s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1' for CMake config files
+[0.392s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv1', 'cmake_prefix_path')
+[0.393s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/cv1/share/cv1/hook/cmake_prefix_path.ps1'
+[0.394s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rrm/src/build/cv1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/src/build/cv1
+[0.395s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/cv1/share/cv1/hook/cmake_prefix_path.dsv'
+[0.395s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/cv1/share/cv1/hook/cmake_prefix_path.sh'
+[0.396s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1/lib'
+[0.397s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1/bin'
+[0.397s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1/lib/pkgconfig/cv1.pc'
+[0.397s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1/lib/python3.10/site-packages'
+[0.397s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1/bin'
+[0.398s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv1/share/cv1/package.ps1'
+[0.399s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rrm/src/install/cv1/share/cv1/package.dsv'
+[0.399s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv1/share/cv1/package.sh'
+[0.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv1/share/cv1/package.bash'
+[0.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv1/share/cv1/package.zsh'
+[0.400s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rrm/src/install/cv1/share/colcon-core/packages/cv1)
+[0.401s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cv1)
+[0.401s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1' for CMake module files
+[0.402s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1' for CMake config files
+[0.402s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv1', 'cmake_prefix_path')
+[0.402s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/cv1/share/cv1/hook/cmake_prefix_path.ps1'
+[0.403s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/cv1/share/cv1/hook/cmake_prefix_path.dsv'
+[0.403s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/cv1/share/cv1/hook/cmake_prefix_path.sh'
+[0.403s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1/lib'
+[0.404s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1/bin'
+[0.404s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1/lib/pkgconfig/cv1.pc'
+[0.404s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1/lib/python3.10/site-packages'
+[0.404s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv1/bin'
+[0.405s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv1/share/cv1/package.ps1'
+[0.406s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rrm/src/install/cv1/share/cv1/package.dsv'
+[0.406s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv1/share/cv1/package.sh'
+[0.407s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv1/share/cv1/package.bash'
+[0.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv1/share/cv1/package.zsh'
+[0.408s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rrm/src/install/cv1/share/colcon-core/packages/cv1)
+[0.622s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rrm/src/build/rrm_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rrm/src/build/rrm_msgs -- -j8 -l8
+[0.623s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rrm/src/build/rrm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/src/build/rrm_msgs
+[0.671s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rrm_msgs)
+[0.671s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs' for CMake module files
+[0.672s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rrm/src/build/rrm_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rrm/src/build/rrm_msgs
+[0.672s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs' for CMake config files
+[0.673s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrm_msgs', 'cmake_prefix_path')
+[0.673s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/hook/cmake_prefix_path.ps1'
+[0.673s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/hook/cmake_prefix_path.dsv'
+[0.674s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/hook/cmake_prefix_path.sh'
+[0.674s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs/lib'
+[0.674s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrm_msgs', 'ld_library_path_lib')
+[0.675s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/hook/ld_library_path_lib.ps1'
+[0.675s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/hook/ld_library_path_lib.dsv'
+[0.675s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/hook/ld_library_path_lib.sh'
+[0.676s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs/bin'
+[0.676s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs/lib/pkgconfig/rrm_msgs.pc'
+[0.676s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs/lib/python3.10/site-packages'
+[0.676s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs/bin'
+[0.677s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/package.ps1'
+[0.677s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/package.dsv'
+[0.677s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/package.sh'
+[0.678s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/package.bash'
+[0.678s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/package.zsh'
+[0.678s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rrm/src/install/rrm_msgs/share/colcon-core/packages/rrm_msgs)
+[0.679s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rrm_msgs)
+[0.679s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs' for CMake module files
+[0.680s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs' for CMake config files
+[0.680s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrm_msgs', 'cmake_prefix_path')
+[0.681s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/hook/cmake_prefix_path.ps1'
+[0.681s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/hook/cmake_prefix_path.dsv'
+[0.681s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/hook/cmake_prefix_path.sh'
+[0.682s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs/lib'
+[0.682s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrm_msgs', 'ld_library_path_lib')
+[0.682s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/hook/ld_library_path_lib.ps1'
+[0.683s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/hook/ld_library_path_lib.dsv'
+[0.683s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/hook/ld_library_path_lib.sh'
+[0.683s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs/bin'
+[0.684s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs/lib/pkgconfig/rrm_msgs.pc'
+[0.684s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs/lib/python3.10/site-packages'
+[0.684s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_msgs/bin'
+[0.684s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/package.ps1'
+[0.685s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/package.dsv'
+[0.686s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/package.sh'
+[0.686s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/package.bash'
+[0.687s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_msgs/share/rrm_msgs/package.zsh'
+[0.687s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rrm/src/install/rrm_msgs/share/colcon-core/packages/rrm_msgs)
+[0.688s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rrm/src/cv2' with build type 'ament_cmake'
+[0.688s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rrm/src/cv2'
+[0.688s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.688s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.692s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rrm/src/cv3' with build type 'ament_cmake'
+[0.693s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rrm/src/cv3'
+[0.693s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.693s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.697s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rrm/src/rrm_sim' with build type 'ament_cmake'
+[0.698s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rrm/src/rrm_sim'
+[0.698s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.698s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.705s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rrm/src/build/cv2': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/cv2 -- -j8 -l8
+[0.708s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rrm/src/build/cv3': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/cv3 -- -j8 -l8
+[0.711s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rrm/src/build/rrm_sim': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/rrm_sim -- -j8 -l8
+[0.781s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rrm/src/build/cv2' returned '0': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/cv2 -- -j8 -l8
+[0.782s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rrm/src/build/cv2': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rrm/src/build/cv2
+[0.785s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rrm/src/build/rrm_sim' returned '0': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/rrm_sim -- -j8 -l8
+[0.786s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rrm/src/build/rrm_sim': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rrm/src/build/rrm_sim
+[0.792s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cv2)
+[0.792s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2' for CMake module files
+[0.793s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rrm/src/build/cv2' returned '0': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rrm/src/build/cv2
+[0.794s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2' for CMake config files
+[0.795s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv2', 'cmake_prefix_path')
+[0.796s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/cv2/share/cv2/hook/cmake_prefix_path.ps1'
+[0.796s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/cv2/share/cv2/hook/cmake_prefix_path.dsv'
+[0.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/cv2/share/cv2/hook/cmake_prefix_path.sh'
+[0.797s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2/lib'
+[0.797s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2/bin'
+[0.797s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2/lib/pkgconfig/cv2.pc'
+[0.798s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2/lib/python3.10/site-packages'
+[0.798s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2/bin'
+[0.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv2/share/cv2/package.ps1'
+[0.799s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rrm/src/install/cv2/share/cv2/package.dsv'
+[0.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv2/share/cv2/package.sh'
+[0.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv2/share/cv2/package.bash'
+[0.800s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv2/share/cv2/package.zsh'
+[0.800s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rrm/src/install/cv2/share/colcon-core/packages/cv2)
+[0.800s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cv2)
+[0.801s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2' for CMake module files
+[0.801s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2' for CMake config files
+[0.801s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv2', 'cmake_prefix_path')
+[0.801s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/cv2/share/cv2/hook/cmake_prefix_path.ps1'
+[0.802s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/cv2/share/cv2/hook/cmake_prefix_path.dsv'
+[0.802s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/cv2/share/cv2/hook/cmake_prefix_path.sh'
+[0.802s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2/lib'
+[0.802s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2/bin'
+[0.802s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2/lib/pkgconfig/cv2.pc'
+[0.803s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2/lib/python3.10/site-packages'
+[0.803s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv2/bin'
+[0.803s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv2/share/cv2/package.ps1'
+[0.804s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rrm/src/install/cv2/share/cv2/package.dsv'
+[0.804s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv2/share/cv2/package.sh'
+[0.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv2/share/cv2/package.bash'
+[0.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv2/share/cv2/package.zsh'
+[0.805s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rrm/src/install/cv2/share/colcon-core/packages/cv2)
+[0.806s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rrm_sim)
+[0.806s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim' for CMake module files
+[0.807s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rrm/src/build/rrm_sim' returned '0': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/rrm/src/build/rrm_sim
+[0.807s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim' for CMake config files
+[0.807s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrm_sim', 'cmake_prefix_path')
+[0.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_sim/share/rrm_sim/hook/cmake_prefix_path.ps1'
+[0.808s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/rrm_sim/share/rrm_sim/hook/cmake_prefix_path.dsv'
+[0.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_sim/share/rrm_sim/hook/cmake_prefix_path.sh'
+[0.809s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim/lib'
+[0.809s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim/bin'
+[0.809s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim/lib/pkgconfig/rrm_sim.pc'
+[0.809s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim/lib/python3.10/site-packages'
+[0.809s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim/bin'
+[0.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_sim/share/rrm_sim/package.ps1'
+[0.810s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rrm/src/install/rrm_sim/share/rrm_sim/package.dsv'
+[0.810s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_sim/share/rrm_sim/package.sh'
+[0.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_sim/share/rrm_sim/package.bash'
+[0.811s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_sim/share/rrm_sim/package.zsh'
+[0.811s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rrm/src/install/rrm_sim/share/colcon-core/packages/rrm_sim)
+[0.812s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rrm_sim)
+[0.812s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim' for CMake module files
+[0.812s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim' for CMake config files
+[0.812s] Level 1:colcon.colcon_core.shell:create_environment_hook('rrm_sim', 'cmake_prefix_path')
+[0.813s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_sim/share/rrm_sim/hook/cmake_prefix_path.ps1'
+[0.813s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/rrm_sim/share/rrm_sim/hook/cmake_prefix_path.dsv'
+[0.813s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/rrm_sim/share/rrm_sim/hook/cmake_prefix_path.sh'
+[0.814s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim/lib'
+[0.814s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim/bin'
+[0.814s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim/lib/pkgconfig/rrm_sim.pc'
+[0.814s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim/lib/python3.10/site-packages'
+[0.814s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/rrm_sim/bin'
+[0.815s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_sim/share/rrm_sim/package.ps1'
+[0.815s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rrm/src/install/rrm_sim/share/rrm_sim/package.dsv'
+[0.815s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_sim/share/rrm_sim/package.sh'
+[0.816s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_sim/share/rrm_sim/package.bash'
+[0.816s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/rrm_sim/share/rrm_sim/package.zsh'
+[0.816s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rrm/src/install/rrm_sim/share/colcon-core/packages/rrm_sim)
+[1.000s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rrm/src/build/cv3' returned '2': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/cv3 -- -j8 -l8
+[1.000s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cv3)
+[1.001s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv3' for CMake module files
+[1.001s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv3' for CMake config files
+[1.001s] Level 1:colcon.colcon_core.shell:create_environment_hook('cv3', 'cmake_prefix_path')
+[1.001s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/cv3/share/cv3/hook/cmake_prefix_path.ps1'
+[1.002s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rrm/src/install/cv3/share/cv3/hook/cmake_prefix_path.dsv'
+[1.002s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rrm/src/install/cv3/share/cv3/hook/cmake_prefix_path.sh'
+[1.003s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv3/lib'
+[1.003s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv3/bin'
+[1.003s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv3/lib/pkgconfig/cv3.pc'
+[1.003s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv3/lib/python3.10/site-packages'
+[1.004s] Level 1:colcon.colcon_core.environment:checking '/home/rrm/src/install/cv3/bin'
+[1.004s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv3/share/cv3/package.ps1'
+[1.005s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rrm/src/install/cv3/share/cv3/package.dsv'
+[1.005s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv3/share/cv3/package.sh'
+[1.005s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv3/share/cv3/package.bash'
+[1.006s] INFO:colcon.colcon_core.shell:Creating package script '/home/rrm/src/install/cv3/share/cv3/package.zsh'
+[1.006s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rrm/src/install/cv3/share/colcon-core/packages/cv3)
+[1.017s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.017s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.017s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[1.017s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.022s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.022s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.022s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.022s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.027s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ExecFailed: /usr/bin/dbus-launch terminated abnormally without any error message
+[1.027s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.027s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rrm/src/install/local_setup.ps1'
+[1.028s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rrm/src/install/_local_setup_util_ps1.py'
+[1.030s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rrm/src/install/setup.ps1'
+[1.031s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rrm/src/install/local_setup.sh'
+[1.031s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rrm/src/install/_local_setup_util_sh.py'
+[1.032s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rrm/src/install/setup.sh'
+[1.033s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rrm/src/install/local_setup.bash'
+[1.033s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rrm/src/install/setup.bash'
+[1.034s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rrm/src/install/local_setup.zsh'
+[1.035s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rrm/src/install/setup.zsh'

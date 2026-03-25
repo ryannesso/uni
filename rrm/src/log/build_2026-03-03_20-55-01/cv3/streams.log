@@ -1,0 +1,14 @@
+[0.015s] Invoking command in '/home/rrm/src/build/cv3': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/cv3 -- -j8 -l8
+[0.069s] [ 25%] [32mBuilding CXX object CMakeFiles/logger_node.dir/src/joint_logger.cpp.o[0m
+[0.069s] [ 50%] [32mBuilding CXX object CMakeFiles/cv3_node.dir/src/teleop.cpp.o[0m
+[0.077s] [01m[K/home/rrm/src/cv3/src/joint_logger.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kcv2/logger_node.hpp: No such file or directory
+[0.077s]     1 | #include [01;31m[K"cv2/logger_node.hpp"[m[K
+[0.077s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[0.077s] compilation terminated.
+[0.078s] gmake[2]: *** [CMakeFiles/logger_node.dir/build.make:76: CMakeFiles/logger_node.dir/src/joint_logger.cpp.o] Error 1
+[0.078s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/logger_node.dir/all] Error 2
+[0.078s] gmake[1]: *** Waiting for unfinished jobs....
+[3.560s] [ 75%] [32m[1mLinking CXX executable cv3_node[0m
+[3.724s] [ 75%] Built target cv3_node
+[3.725s] gmake: *** [Makefile:146: all] Error 2
+[3.726s] Invoked command in '/home/rrm/src/build/cv3' returned '2': AMENT_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/rrm/src/install/rrm_msgs:/home/rrm/install/rrm_simple_robot_model:/home/rrm/install/rrm_sim:/home/rrm/install/cv2:/home/rrm/install/rrm_msgs:/home/rrm/install/cv1:/opt/ros/humble LD_LIBRARY_PATH=/home/rrm/src/install/rrm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/rrm/src/install/rrm_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/rrm/src/build/cv3 -- -j8 -l8
