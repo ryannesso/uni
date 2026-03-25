@@ -28,6 +28,8 @@
      <visual>
       <geometry>
         <cylinder length="0.203" radius = "0.01"/>
+<<<<<<< HEAD
+=======
       </geometry>
       <material name="white">
         <color rgba="1 1 1 1"/>
@@ -52,6 +54,7 @@
     <visual>
       <geometry>
         <cylinder length="0.203" radius = "0.01"/>
+>>>>>>> b905b77b82c825acc52fec53f1bad424679cbb6a
       </geometry>
       <material name="white">
         <color rgba="1 1 1 1"/>
@@ -60,6 +63,33 @@
     </visual>
   </link>
 
+<<<<<<< HEAD
+  <link name="link_2_3">
+    <visual>
+      <geometry>
+       <sphere radius="0.03"/>
+      </geometry>
+      <material name="gray">
+        <color rgba="0.2 0.2 0.2 1"/>
+      </material>
+        <origin xyz="0 0 0" rpy = "0 0 0"/>
+    </visual>
+  </link>
+  
+  <link name="link_3">
+    <visual>
+      <geometry>
+        <cylinder length="0.203" radius = "0.01"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+      <origin xyz="0 0 0.1015" rpy = "0 0 0"/>
+    </visual>
+  </link>
+
+=======
+>>>>>>> b905b77b82c825acc52fec53f1bad424679cbb6a
   <link name="link_3_4">
       <visual>
         <geometry>
@@ -100,10 +130,39 @@
     <visual>
       <geometry>
         <cylinder length="0.15" radius = "0.01"/>
+<<<<<<< HEAD
+=======
       </geometry>
       <material name="white">
         <color rgba="1 1 1 1"/>
       </material>
+      <origin xyz="0 0 0.075" rpy = "0 0 0"/>
+    </visual>
+  </link>
+
+  <link name="link_5_6">
+      <visual>
+        <geometry>
+         <sphere radius="0.03"/>
+        </geometry>
+        <material name="gray">
+          <color rgba="0.2 0.2 0.2 1"/>
+        </material>
+          <origin xyz="0 0 0" rpy = "0 0 0"/>
+      </visual>
+  </link>
+  
+  <link name="link_6">
+    <visual>
+      <geometry>
+        <!-- Длина равна макс. вылету ползунка (0.1), радиус чуть меньше (поршень) -->
+        <cylinder length="0.1" radius="0.008"/>
+>>>>>>> b905b77b82c825acc52fec53f1bad424679cbb6a
+      </geometry>
+      <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+<<<<<<< HEAD
       <origin xyz="0 0 0.075" rpy = "0 0 0"/>
     </visual>
   </link>
@@ -134,6 +193,13 @@
     </visual>
   </link>
 
+=======
+      <!-- Смещаем геометрию вниз в трубу 5-го звена, чтобы не было разрыва -->
+      <origin xyz="0 0 -0.05" rpy = "0 0 0"/>
+    </visual>
+  </link>
+
+>>>>>>> b905b77b82c825acc52fec53f1bad424679cbb6a
   <link name="tool0"/>
 
   <joint name="joint_1" type="revolute">
@@ -183,6 +249,7 @@
     <origin xyz="0 0 0.15" rpy = "0 0 0"/>
     <limit effort="1000.0" lower="0" upper="0.1" velocity="0.5"/>
   </joint>
+<<<<<<< HEAD
 
   <joint name="joint_tool0" type="fixed">
     <parent link="link_6"/>
@@ -196,6 +263,21 @@
     <origin xyz="0 0 0.203" rpy = "0 0 0"/>
   </joint>
 
+=======
+
+  <joint name="joint_tool0" type="fixed">
+    <parent link="link_6"/>
+    <child link="tool0"/>
+    <origin xyz="0 0 0" rpy = "0 0 0"/>
+  </joint>
+
+  <joint name="joint_2_3" type="fixed">
+    <parent link="link_2"/>
+    <child link="link_2_3"/>
+    <origin xyz="0 0 0.203" rpy = "0 0 0"/>
+  </joint>
+
+>>>>>>> b905b77b82c825acc52fec53f1bad424679cbb6a
   <joint name="joint_3_4" type="fixed">
     <parent link="link_3"/>
     <child link="link_3_4"/>
