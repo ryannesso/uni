@@ -1,112 +1,123 @@
-clear
+clear; clc; close all;
 
-% NDATA(2126x25) typ_ochorenia(2126x1)
+% Načítanie dát
 load CTGdata.mat
+inputs = NDATA';                    
+targets = full(ind2vec(typ_ochorenia'));  
 
-inputs = NDATA';                    % 25 x 2126
-targets = full(ind2vec(typ_ochorenia'));  % 3 x 2126
+% Definovanie 3 štruktúr pre porovnanie
+allConfigs = {[60 30 10]};
+numConfigs = length(allConfigs);
+runs = 5;
 
-neurons = 45;
-net = patternnet(neurons);
+% Premenné pre uloženie globálne najlepšej siete (Bod 5)
+globalBestAcc = 0;
+globalBestNet =[];
+globalBestConfigStr = '';
+globalBestIdx = 0;
 
-runs = 1;
+fprintf('==============================================================\n');
+fprintf('ÚLOHA 6: KLASIFIKÁCIA NA MEDICÍNSKYCH DÁTACH\n');
+fprintf('==============================================================\n');
 
-% Initialize variables to store results
-trainAccs = zeros(runs, 1);
-testAccs = zeros(runs, 1);
-overallAccs = zeros(runs, 1);
- 
-for run = 1:runs
+for c = 1:numConfigs
+    neurons = allConfigs{c};
+    configStr = num2str(neurons);
     
-    net.divideParam.trainRatio = 0.6; 
-    net.divideParam.valRatio = 0.0;   
-    net.divideParam.testRatio = 0.4;  
+    trainAccs = zeros(runs, 1);
+    testAccs = zeros(runs, 1);
+    overallAccs = zeros(runs, 1);
+    allNets = cell(1, runs);
+    allTr = cell(1, runs);
 
-    % Set training parameters
-    net.trainParam.goal = 1e-4;       
-    net.trainParam.epochs = 300;      
-    net.trainParam.show = 20;         
+    fprintf('\n>>> Porovnávaná štruktúra: [%s] <<<\n', configStr);
     
-    % Train the network for this run
-    [net, tr] = train(net, inputs, targets);
-    
-    % Simulate network output
-    outnetsim = sim(net, inputs);
-    
-    % Convert output to predicted classes
-    predicted_classes = vec2ind(outnetsim);
-    true_classes = vec2ind(targets);
-    
-    % Calculate accuracy for training, testing, and overall
-    trainAccs(run) = sum(predicted_classes(tr.trainInd) == true_classes(tr.trainInd)) / length(tr.trainInd) * 100;
-    testAccs(run) = sum(predicted_classes(tr.testInd) == true_classes(tr.testInd)) / length(tr.testInd) * 100;
-    overallAccs(run) = sum(predicted_classes == true_classes) / length(true_classes) * 100;
+    for run = 1:runs
+        net = patternnet(neurons);
+        net.divideParam.trainRatio = 0.6; 
+        net.divideParam.valRatio = 0.2;   
+        net.divideParam.testRatio = 0.2;  
 
-    % Confusion matrix calculation
-    confMat = confusionmat(true_classes, predicted_classes);
+        net.trainParam.goal = 1e-4;       
+        net.trainParam.epochs = 300;      
+        net.trainParam.showWindow = false;[net, tr] = train(net, inputs, targets);
+        
+        allNets{run} = net;
+        allTr{run} = tr;
+        
+        outnetsim = sim(net, inputs);
+        predicted_classes = vec2ind(outnetsim);
+        true_classes = vec2ind(targets);
+        
+        trainAccs(run) = sum(predicted_classes(tr.trainInd) == true_classes(tr.trainInd)) / length(tr.trainInd) * 100;
+        testAccs(run) = sum(predicted_classes(tr.testInd) == true_classes(tr.testInd)) / length(tr.testInd) * 100;
+        overallAccs(run) = sum(predicted_classes == true_classes) / length(true_classes) * 100;
+
+        fprintf(' Beh %d: Train: %6.2f%% | Test: %6.2f%% | Celkovo: %6.2f%%\n', run, trainAccs(run), testAccs(run), overallAccs(run));
+    end
+
+    % Bod 4: Pre každú štruktúru uveďte minimálnu, maximálnu a priemernú úspešnosť
+    fprintf(' --------------------------------------------------------\n');
+    fprintf(' Štatistika pre [%s] na TEST dátach:\n', configStr);
+    fprintf(' Min: %.2f%% | Max: %.2f%% | Priemer: %.2f%%\n', min(testAccs), max(testAccs), mean(testAccs));
     
-    % Extract TP, FN, TN, FP from the confusion matrix
-    TP = confMat(2, 2) + confMat(3, 3);  % True Positives (2nd and 3rd classes)
-    FN = confMat(2, 1) + confMat(3, 1);  % False Negatives (1st class predicted as 2nd or 3rd)
-    TN = confMat(1, 1);                  % True Negatives (1st class predicted as 1st)
-    FP = confMat(1, 2) + confMat(1, 3);  % False Positives (1st class predicted as 2nd or 3rd)
+    % Bod 4: Pre najlepší výsledok z každej štruktúry uveďte priebeh učenia a maticu
+    [bestTestAccOfConfig, bestIdx] = max(testAccs);
+    bestNetOfConfig = allNets{bestIdx};
+    bestTrOfConfig = allTr{bestIdx};
     
-    % Sensitivity (Recall for positive class)
-    sensitivity = TP / (TP + FN);
+    figure('Name', ['Performance - Štruktúra [' configStr ']']);
+    plotperform(bestTrOfConfig);
     
-    % Specificity (Recall for negative class)
-    specificity = TN / (TN + FP);
+    figure('Name',['Confusion Matrix - Štruktúra [' configStr ']']);
+    plotconfusion(targets, bestNetOfConfig(inputs));
+    title(['Kontingenčná matica (najlepší beh č. ' num2str(bestIdx) ' pre štruktúru[' configStr '])']);
     
-    % Display confusion matrix for each run
-    figure
-    plotconfusion(targets(:, tr.trainInd), outnetsim(:, tr.trainInd), 'Training Run ' + string(run))
-    figure
-    plotconfusion(targets(:, tr.testInd), outnetsim(:, tr.testInd), 'Testing Run ' + string(run))
-    figure
-    plotconfusion(targets, outnetsim, 'Overall Run ' + string(run))
-    % Display Sensitivity and Specificity
-    fprintf('Run %d - Sensitivity: %.2f %%\n', run, sensitivity * 100);
-    fprintf('Run %d - Specificity: %.2f %%\n', run, specificity * 100);
+    % Hľadanie úplne najlepšej siete pre bod 5
+    if bestTestAccOfConfig > globalBestAcc
+        globalBestAcc = bestTestAccOfConfig;
+        globalBestNet = bestNetOfConfig;
+        globalBestConfigStr = configStr;
+        globalBestIdx = bestIdx;
+    end
 end
 
-% Calculate min, max, and average accuracy
-minTrainAcc = min(trainAccs);
-maxTrainAcc = max(trainAccs);
-avgTrainAcc = mean(trainAccs);
+fprintf('\n==============================================================\n');
+fprintf('BOD 5: ANALÝZA ÚPLNE NAJLEPŠEJ SIETE ZO VŠETKÝCH\n');
+fprintf('Najlepšia štruktúra: [%s] (beh č. %d) s Test Acc = %.2f%%\n', globalBestConfigStr, globalBestIdx, globalBestAcc);
+fprintf('==============================================================\n');
 
-minTestAcc = min(testAccs);
-maxTestAcc = max(testAccs);
-avgTestAcc = mean(testAccs);
-
-minOverallAcc = min(overallAccs);
-maxOverallAcc = max(overallAccs);
-avgOverallAcc = mean(overallAccs);
-
-% Display results
-fprintf('--- Results after 5 Runs ---\n');
-fprintf('Min Training Accuracy: %.2f %%\n', minTrainAcc);
-fprintf('Max Training Accuracy: %.2f %%\n', maxTrainAcc);
-fprintf('Avg Training Accuracy: %.2f %%\n', avgTrainAcc);
-
-fprintf('Min Test Accuracy: %.2f %%\n', minTestAcc);
-fprintf('Max Test Accuracy: %.2f %%\n', maxTestAcc);
-fprintf('Avg Test Accuracy: %.2f %%\n', avgTestAcc);
-
-fprintf('Min Overall Accuracy: %.2f %%\n', minOverallAcc);
-fprintf('Max Overall Accuracy: %.2f %%\n', maxOverallAcc);
-fprintf('Avg Overall Accuracy: %.2f %%\n', avgOverallAcc);
-
+% Bod 5: postup testovania vybraných vzoriek
 sample1 = find(typ_ochorenia == 1, 1);  % normálny
 sample2 = find(typ_ochorenia == 2, 1);  % podozrivý
 sample3 = find(typ_ochorenia == 3, 1);  % patologický
 
-% Získaj vstupy a simuluj sieť
 selected_inputs = NDATA([sample1, sample2, sample3], :)';
-results = sim(net, selected_inputs);
+results = sim(globalBestNet, selected_inputs);
 predicted = vec2ind(results);
 
-% Výpis
-fprintf('\n--- Klasifikácia jednotlivých vzoriek ---\n');
-fprintf('Normálny (1): Predikovaná trieda = %d\n', predicted(1));
-fprintf('Podozrivý (2): Predikovaná trieda = %d\n', predicted(2));
-fprintf('Patologický (3): Predikovaná trieda = %d\n', predicted(3));
+fprintf('\n--- Klasifikácia vybraných vzoriek ---\n');
+fprintf('Vzorka index %d (Skutočnosť: 1 - normálny): Predikcia = %d\n', sample1, predicted(1));
+fprintf('Vzorka index %d (Skutočnosť: 2 - podozrivý): Predikcia = %d\n', sample2, predicted(2));
+fprintf('Vzorka index %d (Skutočnosť: 3 - patologický): Predikcia = %d\n', sample3, predicted(3));
+
+% Bod 5: Výsledná úspešnosť klasifikácie, senzitivita a špecificita
+finalOut = globalBestNet(inputs);
+predicted_global = vec2ind(finalOut);
+true_global = vec2ind(targets);
+
+final_overall_acc = sum(predicted_global == true_global) / length(true_global) * 100;
+fprintf('\n--- Výsledná celková úspešnosť najlepšej siete: %.2f%% ---\n', final_overall_acc);
+
+[~, cm] = confusion(targets, finalOut);
+fprintf('\n--- Senzitivita a Špecificita (najlepšia sieť) ---\n');
+for j = 1:3
+    TP = cm(j,j);
+    FN = sum(cm(j,:)) - TP;
+    FP = sum(cm(:,j)) - TP;
+    TN = sum(cm(:)) - (TP + FN + FP); 
+    
+    sens = TP / (TP + FN);
+    spec = TN / (TN + FP);
+    fprintf(' Trieda %d: Senzitivita: %.3f, Špecificita: %.3f\n', j, sens, spec);
+end
