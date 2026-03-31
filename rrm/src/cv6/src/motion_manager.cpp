@@ -16,18 +16,18 @@ public:
     // 1. Создаем группу коллбеков для сервиса, чтобы он мог обрабатываться в отдельном потоке
     srv_cb_group_ = this->create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
     
-    // Создаем подписчика (Callback Group по умолчанию)
+    // Создаем подписчика 
     sub_ = this->create_subscription<sensor_msgs::msg::JointState>(
       "/joint_states", 10, std::bind(&MotionManager::js_cb, this, std::placeholders::_1));
 
-    // 2. Добавляем сервис в созданную Callback Group
+    // 2. Добавляем сервис 
     service_ = this->create_service<MoveToCartesian>(
       "move_to_cartesian",
       std::bind(&MotionManager::move_cb, this, std::placeholders::_1, std::placeholders::_2),
       rmw_qos_profile_services_default,
       srv_cb_group_);
 
-    // Клиенты (Callback Group по умолчанию)
+    // Клиенты 
     ik_client_ = this->create_client<BestIK>("best_ik");
     move_client_ = this->create_client<MoveCmd>("move_command");
     RCLCPP_INFO(this->get_logger(), "MotionManager ready");
@@ -64,8 +64,7 @@ private:
 
     auto ik_future = ik_client_->async_send_request(ik_req);
     
-    // Внимание: мы ждем ответа, но теперь это не вызовет краш, т.к. этот сервис крутится в своем потоке 
-    // благодаря MultiThreadedExecutor в main()
+    //мы ждем ответа, но теперь это не вызовет краш, т.к. этот сервис крутится в своем потоке 
     auto status = ik_future.wait_for(std::chrono::seconds(2));
     if (status != std::future_status::ready) {
       res->success = false; res->message = "IK service call timed out"; return;
@@ -73,7 +72,11 @@ private:
 
     auto ik_res = ik_future.get();
     if (!ik_res->success) { res->success = false; res->message = "IK solver found no valid solution"; return; }
-
+  // --- ДОБАВЬ ЭТОТ БЛОК ---
+    RCLCPP_INFO(this->get_logger(), "Best IK Solution found! Target joints:");
+    RCLCPP_INFO(this->get_logger(), "  J1:%.3f J2:%.3f J3:%.3f J4:%.3f J5:%.3f J6:%.3f",
+              ik_res->solution[0], ik_res->solution[1], ik_res->solution[2],
+              ik_res->solution[3], ik_res->solution[4], ik_res->solution[5]);
     if (!move_client_->wait_for_service(std::chrono::seconds(2))) {
       res->success = false; res->message = "move_command service unavailable"; return;
     }
@@ -104,7 +107,6 @@ int main(int argc, char **argv) {
   rclcpp::init(argc, argv);
   auto node = std::make_shared<MotionManager>();
   
-  // 3. Используем многопоточный экзекутор
   rclcpp::executors::MultiThreadedExecutor executor;
   executor.add_node(node);
   executor.spin(); // Крутим ноду в нескольких потоках
