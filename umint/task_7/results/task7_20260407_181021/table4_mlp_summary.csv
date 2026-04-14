@@ -1,0 +1,3 @@
+Model,Min_test_acc_pct,Max_test_acc_pct,Priemer_test_acc_pct,Priemer_test_loss
+MLP1,97.47,97.93,97.73,0.0717479795217514
+MLP2,97.68,97.98,97.872,0.0775894939899445

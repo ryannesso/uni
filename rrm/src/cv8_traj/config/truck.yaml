@@ -1,0 +1,9 @@
+model_spawner_truck:
+  ros__parameters:
+    frame_id: base_link
+    marker_ns: truck
+    marker_id: 0
+    mesh_resource: file:///root/catkin_ws/src/cv8/stl_modely/truck.stl
+    mesh_scale: 1.0
+    position: [1.2, 1.8, -0.5]
+    publish_period_ms: 500

@@ -1,0 +1,4 @@
+Model,Dropout,Pocet_behov,Priemer_epochy_zaciatku_pretrenovania,Priemer_val_loss
+D1,0,5,5944.2,0.0266061268746853
+D2,0.3,5,4895.4,0.0294474612921476
+D3,0.5,5,8915.8,0.0255402393639088

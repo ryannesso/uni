@@ -1,0 +1,43 @@
+manipulator_node:
+  ros__parameters:
+    # Fill these using values printed by pose_teacher.
+    # Required (per assignment): t1, t3, tvia.
+    home: [0.76011, 0.20894, -0.22937, -1.54931, 0.76033, 1.54115]
+    t1: [0.73862, 0.91513, -0.52723, 0.11010, 1.30171, 0.70301]
+    t3: [0.86628, 0.07396, 0.83204, 0.06398, 0.70089, 0.81663]
+    tvia: [0.99185, 0.07046, 0.47472, 0.05207, 1.05584, 0.96552]
+
+    # Explicit endpoints for machining edges (replace with taught values from pose_teacher):
+    t2: [1.10157, 0.41582, 0.27196, 0.06125, 0.90842, 1.06328]
+    t4: [0.54421, 0.70054, -0.03570, 0.46853, 1.03365, 0.25892]
+
+    # Otherwise endpoints are computed as:
+    #   T2 = T1 + edge1,  T4 = T3 + edge2
+    # By default edge1/edge2 are in local tool frame at T1/T3 (edge_in_tool_frame=true).
+    # Set edge_in_tool_frame=false to interpret edge vectors directly in base_link frame.
+    # Orientation during LIN stays constant (from T1/T3).
+    # edge1: [0.0, 0.20, 0.0]
+    # edge2: [0.0, 0.20, 0.0]
+    # edge_in_tool_frame: false
+
+    # Trajectory timing
+    dt: 0.01
+    ptp_time: 4.0
+    transition_time_a_via: 3.0
+    transition_time_via_b: 3.0
+
+    # Approach/retract offset magnitude along world Z axis (meters, vertical)
+    approach_offset: -0.15
+
+    # LIN speeds (m/s) used to compute duration (quintic time-scaling)
+    v_approach: 0.03
+    v_machining: 0.1
+
+    # Logging (CSV):
+    # - log_path: signals for three selected joints (time,q,qd,qdd for each)
+    # - log_tool_path: TCP Cartesian trajectory (time,x,y,z,motion)
+    log_joint_index: 3
+    # индексы суставов для логирования (0-based): [0..5]
+    log_joint_indices: [0, 1, 2]
+    log_path: /root/catkin_ws/src/cv8_traj/logs/cv8_traj_joint_log.csv
+    log_tool_path: /root/catkin_ws/src/cv8_traj/logs/cv8_traj_tool_log.csv

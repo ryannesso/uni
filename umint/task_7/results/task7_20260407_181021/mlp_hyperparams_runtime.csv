@@ -1,0 +1,2 @@
+NumRuns,Epochs,InitialLearnRate,MiniBatchSize,L2Regularization,UseGPU,DoTiming,TimingEpochs
+5,20,0.001,64,0.0001,1,1,5

@@ -1,0 +1,2 @@
+NumRuns,MaxEpochs,MiniBatchSize,InitialLearnRate,ValidationPatience,ExecutionEnvironment,Variants,BaseDropout,DropoutRates,DoTiming,TimingEpochs
+5,15,64,0.001,5,auto,[1 2 3],0,[0 0.3 0.5],1,5

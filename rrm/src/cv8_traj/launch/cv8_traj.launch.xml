@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="use_rviz" default="true" />
+  <arg name="truck_params_file" default="/root/catkin_ws/src/cv8_traj/config/truck.yaml" />
+  <arg name="manipulator_params_file" default="/root/catkin_ws/src/cv8_traj/config/params.yaml" />
+
+  <!-- Robot model -->
+  <node pkg="robot_state_publisher" exec="robot_state_publisher" name="robot_state_publisher" output="screen">
+    <param name="use_sim_time" value="false" />
+    <param name="robot_description" value="$(command 'xacro $(find-pkg-share abb_model)/urdf/abb_irb4600_60_205.xacro')" />
+  </node>
+
+  <!-- Workpiece marker -->
+  <node pkg="cv8_traj" exec="model_spawner" name="model_spawner_truck" output="screen">
+    <param name="use_sim_time" value="false" />
+    <!-- Spawn truck mesh (RViz Marker: MESH_RESOURCE). -->
+    <param from="$(var truck_params_file)" />
+  </node>
+
+  <!-- Interactive marker + IK in real-time (teaching) -->
+  <node pkg="cv8_traj" exec="pose_teacher" name="pose_teacher" output="screen">
+    <param name="use_sim_time" value="false" />
+    <param name="publish_rate_hz" value="10.0" />
+  </node>
+
+  <!-- Trajectory executor -->
+  <node pkg="cv8_traj" exec="manipulator_node" name="manipulator_node" output="screen">
+    <param name="use_sim_time" value="false" />
+    <param from="$(var manipulator_params_file)" />
+  </node>
+
+  <!-- RViz -->
+  <node if="$(var use_rviz)" pkg="rviz2" exec="rviz2" name="rviz2" output="screen">
+    <param name="use_sim_time" value="false" />
+    <env name="LIBGL_ALWAYS_SOFTWARE" value="1" />
+    <env name="LIBGL_DRI3_DISABLE" value="1" />
+  </node>
+</launch>

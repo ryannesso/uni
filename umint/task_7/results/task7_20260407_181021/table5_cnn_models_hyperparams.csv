@@ -1,0 +1,4 @@
+Model,Conv_vrstvy,Filtre,FC_vrstvy,Epochy,Batch
+CNN1,2,"16,32",128,15,64
+CNN2,2,"32,64",128,15,64
+CNN3,3,"32,64,128",256,15,64

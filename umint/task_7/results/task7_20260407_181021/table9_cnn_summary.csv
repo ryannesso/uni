@@ -1,0 +1,4 @@
+Model,Min_test_acc_pct,Max_test_acc_pct,Priemer_test_acc_pct,Priemer_test_loss
+CNN1,98.8,99.12,98.946,0.0352854818105698
+CNN2,98.88,99.32,99.07,0.0299886107444763
+CNN3,98.99,99.38,99.174,0.028253461420536
